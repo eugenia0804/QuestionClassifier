@@ -1,0 +1,192 @@
+CT-STEM Unit,,Question,"Modeling &
+Simulation Practices",Algorithm Practices,"Computational
+Data Practices","Computational
+Visualization 
+Practices","Computational
+Problem Solving
+Practices","Programming
+Practices"
+Sampling Distributions,1.1,What is the parameter of interest? What symbol is used to represent this value?,0,0,0,0,0,0
+https://ct-stem.northwestern.edu/curriculum/preview/1630/ ,1.2,What is the statistic obtained from the sample? What symbol is used to represent this value?,0,0,0,0,0,0
+,2.1,How many samples of size 2 can be taken from this population?,0,0,0,0,0,0
+,2.2,What is the parameter of interest for this situation?,0,0,0,0,0,0
+,2.3,What statistic are we using to estimate the parameter of interest for this situation?,0,0,0,0,0,0
+,2.4,Do you think taking a sample this size from this population effectively estimates the mean score of the population?,0,0,0,0,0,0
+,3.1,Calculate the sample mean for all possible samples of size 2 from this population. ,1,0,1,0,0,0
+,3.2,Create a dotplot of your results from question #2. Create your sketch below.,1,0,1,1,0,0
+,3.3,"In most real-life situations, we cannot create the dotplot of all possible samples of size n from the entire population (size N). Why not?",1,0,0,1,0,0
+,4.1,"Click ""setup"" and then ""collect sample"". What did the model do?",1,0,0,0,0,0
+,4.2,"Press the ""collect sample"" button 30 times. Drag the word ""Mean"" from the table to the horizontal axis of the empty graph. The graph is starting to take shape, but it cannot be called a sampling distribution yet... Why not?",1,0,1,1,0,0
+,4.3,"A school administrator took a sample of 2 AP statistics students and found their average AP test score to be 1.5. Based on that sample, the Administrator is claiming that the mean test score for all AP stats students at ETHS is 1.5. Do you have substantial evidence to refute their claim? You just created a statistical model - use it to explain to the administrator that their estimate is probably wrong.",1,0,1,0,0,0
+,4.4,What was wrong with the administrator's sample?,0,0,1,0,0,0
+,5.1,"On the left side of the screen you see a table. Click on one of the cells in the row with ""index"" 17. This should highlight one single dot on the dotplot. Explain what that dot represents in the context of the situation.",1,0,1,1,0,0
+,5.2,Suppose an administrator is claiming that the true Mean score of the population is 3.2. Do you have convincing evidence to refute their claim? Explain.,1,0,1,0,0,0
+,6,survey questions,,,,,,
+,,,,,,,,
+,1.1,"First, we'll create the same sampling distribution that we created yesterday. Use the model above to create the sampling distribution for the mean scores of samples of 2 students (n=2) taken from a population of 48 students (N=48).
+
+1) Set the slider and click ""setup"" and ""collect samples."" The sampling will happen faster if you pull the ""model speed"" slider all the way to the right.
+
+2) Click the button that says ""tables"" in the upper left, then ""data set"" in order to see your data table. You can drag it around in the CODAP window to wherever you want it.
+
+3) Now we'll set up the graph. First, click the ""graph"" button in the top left. Then click the ""click here"" along the x-axis and select ""mean.""
+
+4) We're also going to find the mean of the data in this graph (That is, the mean of all the means from each sample). To do that click on the ruler to the right of the graph and check ""mean."" There should now be a line in the middle of your sampling distribution for the mean, and you can hover over it to find out its value.
+
+The mean score for our population of 48 students is 3.4. Is your mean close to that value?",1,0,1,1,0,0
+,2.1,"Now we're going to do the same thing, except instead of calculating the mean score for our sample, we're going to calculate the MAXIMUM score of our sample. We (Mr. Mickelson and Mr. Mills) made this model, so we can change it in order to explore a different statistic. We're going to change the model to find the maximum of each sample. 
+
+Note: If you need to start fresh just reload the page and everything will reset.
+
+a) Underneath the model window is a tab called ""netLogo Code"". Click on that to open the code. Don't freak out, we're just going to make one little change!
+
+b) Scroll down to find line 29. You can see the line numbers on the left side of the workspace. 
+
+c) In lines 30 and 31 you should see the word ""Mean."" In both places, change the word Mean to the word Max.
+
+d) Press recompile code at the top of the workspace.
+
+e) Click setup and collect samples. This time the model will take the maximum value from each sample.
+
+e) Click ""tables,"" the ""data set"" again. Click ""graph"" and this time put the ""Max"" on the axis of the graph.
+
+f) Add the mean to your graph of sample maximums (click the ruler, then check ""Mean"").
+
+For our population, what is the actual maximum? Is the mean of this sampling distribution close to that value?",1,0,1,1,0,1
+,2.2,"Now erase that data (either with the trashcan icon under ""tables"" or refreshing the page) and do the same thing using the minimum statistic (just repeat what you did for Max, just use the word Min). Is the mean of this sampling distribution the same as the actual value of the population minimum?",1,1,1,1,0,1
+,3.1,Do you think the mean is a biased estimator? Explain your reasoning.,1,0,1,0,0,0
+,3.2,On the next page we'll use the same model but increase the size of our sample (n). What do you think will happen to the sampling distribution? How will that show up in the model?,1,0,1,1,0,0
+,3.3,On the next page you'll be asked to use the model to see how sample size affects the variability of the sampling distribution. Make a plan for how you'll use the model to investigate this question.,1,0,0,0,0,0
+,4.1,"Use your plan and investigate how changing the sample size affects the variability of the sampling distribution (you can show the standard deviation on your graphs in the same way that we showed the mean, go back to page 1 if you need to!). Was your prediction on the previous page correct?",1,0,1,1,0,0
+,4.2,By what factor do you need to increase the sample size in order for the standard deviation to be cut in half?,1,0,1,0,0,0
+,4.3,By what factor do you think you need to increase sample size in order to reduce the standard deviation to 1/3 of it's value? ,0,0,1,0,0,0
+,4.4,"Based on you answers to the previous questions, can guess at least part of what the formula for the standard deviation of a sampling distribution might be?",0,0,1,0,0,0
+,4.5,"When we're taking samples in real life in order to estimate the true value of a parameter, is it better to have more or less variation?",1,0,0,0,0,0
+,5.1,On pages 2-3 you learned about bias. On page 4 you learned about variability. Explain the difference between those 2 concepts in a way that a freshman could understand. You are welcome to use your book and the internet for more definitions and illustrations (I think your book has a really useful graphic on page 481).,0,0,0,0,0,0
+,5.2,"Ideally, we want the variation in our sampling distribution to be as _______ as possible.",0,0,0,0,0,0
+,5.3,"Two graduate students are studying the effects of a new cancer drug. Student A took a sample of size 10 from the population, while student B took a sample of size 30. Whose results are better? Why? What do we mean by 'better'?",0,0,0,0,0,0
+,,,,,,,,
+,1.1,"How many total traffic stops do you think that EPD made in the 6.75 months between 1/1/20 and 7/23/20? I realize you have no great way of knowing, take a guess!",0,0,0,0,0,0
+,2.1,Someone looks at this data and concludes that EPD is biased against white people. Do you agree? How would you use this data to support or refute their claim?,1,0,1,1,0,0
+,2.2,What other information do you think is needed in order to investigate the idea that EPD is disproportionately stopping one race of driver?,1,0,0,0,0,0
+,2.3,Calculate the proportion of traffic stops in which the driver was black.,1,0,1,0,0,0
+,2.4,"Set the population proportion slider to match your answer in the previous question. When you click ""setup"" button and then the “take sample” button the model will take an SRS of 5 traffic stops and report the proportion of drivers who identify as black. Take a few samples. Do you get proportions close to the actual value? Explain why you do or do not.",1,0,1,1,0,0
+,2.5,"On the next page you're going to do some work with sampling distributions. Define the term ""sampling distribution"" in one sentence. ",0,0,0,0,0,0
+,2.6,"Before we get too deep into this, let's acknowledge that this is a very complicated issue. The how and why of traffic stops is complicated. Understandint that there are no right answers, what are some possible problems that exist with this data before we do anything to it?",1,0,1,0,0,0
+,3.1,Set the model with parameters p = 0.15 and n = 5. Create an approximate sampling distribution. Describe the sampling distribution in context (Remember your SOCS!).,1,0,1,1,0,0
+,3.2,Don't use the model yet. Make a prediction. What will happen to the sampling distribution if you make the true proportion higher?,0,0,0,0,0,0
+,3.3,"OK, now use the model, change the proportion to something higher (like 0.8). How does the sampling distribution compare?",1,0,1,1,0,0
+,3.4,"Before using the model, make another prediction. What do you think will happen to the sampling distribution if we keep the proportion the same but increase the sample size from 5 to something higher (like 30)?",0,0,0,0,0,0
+,3.5,Test your hypothesis by changing the sample size. How does the sampling distribution change? ,1,0,1,1,0,0
+,3.6,Which values for n and p will make the sampling distribution look the most normal? Perform some experiments using the model and report your findings here.,1,0,1,1,0,0
+,4.1,"The Evanstonian is concerned about the effect of vaping and e-cigarettes at ETHS. The Evanstonian staff poll a simple random sample of 150 ETHS students and ask,
+
+“Yes or No? Do you think that vaping (and/or e-cigarettes) are a problem at ETHS?”
+
+Is the 10% condition satisfied? Why or why not? If so, calculate the standard deviation of the sampling distribution of p^. Suppose it's known that 30% of students will say ""yes"" to this question.",0,0,0,0,0,0
+,4.2,Suppose that 30% of all ETHS students respond “Yes” to this question. Let p^ be the sample proportion of ETHS students who respond “Yes” to this question. What is the mean of the sampling distribution of p^?,0,0,0,0,0,0
+,4.3,What is the shape of the sampling distribution of p^? Explain your reasoning and show work.,0,0,0,0,0,0
+,4.4,"What is the probability that, in a random sample of 150 ETHS students, less than 25% will respond ""Yes"". (Note: You've shown that this data can be approximated as normal, and you have calculated the mean and standard deviation of that distribution. This is now the sort of problem that you did waaaay back in chapter 2!)",0,0,0,0,0,0
+,5.1,"In a congressional district, 55% of registered voters are Democrats. Suppose we take a random sample of 100 voters from this congressional district. What is the probability of getting less than 50% Democrats in a random sample of size 100?",0,0,0,0,0,0
+,5.2,"The Chicago Tribune asked a random sample of 750 Chicago residents. ""Do you wear a face covering in public?"" Based on a previous study by the IDPH, we know that 50% of ALL Chicago residents actually wear a face covering in public. Let p^ be the sample proportion who say that they wear a face covering in public. What is the probability that, in a random sample of 750, more than 75% will respond ""Yes (I wear a face covering in public)""?",0,0,0,0,0,0
+,6.1,If the claim is true what could that suggest about racial bias in EPD?,0,0,0,0,0,0
+,6.2,The idea that Police aren't always fair in carrying out their duties can bring up a lot of feelings and experiences. Do you have any personal thoughts or experiences about this topic that you'd like to share?,0,0,0,0,0,0
+,6.3,What would it mean if p1 = p2?,0,0,0,0,0,0
+,7.1,"Using our omnipotence, we believe that the proportion of black drivers stopped in traffic stops is about 30%. What is the largest sample size you could use to estimate the true proportion of black drivers stopped in traffic stops? Show your calculations. What is the smallest sample size you could use? Jot down these numbers as you're going to need it later on!",0,0,0,0,0,0
+,7.2,"Once again, we'll use our omnipotence to guess that the true proportion of black residents in Evanston is about 17%. What is the largest sample you could take from the entire population in Evanston and still meet all of our conditions?  What is the smallest sample size you could use? Show calculations. Jot down this number as you're going to need it later on!
+
+",0,0,0,0,0,0
+,7.3,"There's something obviously unrealistic in our pretend scenario. In real life we might not have any idea about the true proportions. What do you think you would do in that case? (we'll answer this question in the next chapter!)
+
+",0,0,0,0,0,0
+,8.1,What does it mean in context if p1 - p2 is positive?,0,0,0,0,0,0
+,8.2,What does it mean in context if p1 - p2 is zero?,0,0,0,0,0,0
+,8.3,What does it mean in context if p1 - p2 is negative?,0,0,0,0,0,0
+,9.1,"Set the population proportion to our actual value for proportion of traffic stops of black drivers (0.30). Set the sample size slider to the number you calculated on page 7 for the smallest allowable sample size. Collect a sample, and record your sample proportion (p^1) here.",1,0,1,0,0,0
+,9.2,"Set the population proportion to our actual value for proportion of black resisdents in Evanston (0.17). Set the sample size slider to the number you calculated on page 7 for the smallest allowable sample size. Collect a sample, and record your sample proportion (p^2) here.",1,0,1,0,0,0
+,9.3,"Calculate the mean (μp1^−p2^) and standard deviation (σp1^−p2^)
+
+",1,0,1,1,0,0
+,9.4,What conclusion(s) would you draw BASED ON YOUR DATA?,1,0,1,1,0,0
+,10.1,Calculate the value of p1−p2,0,0,0,0,0,0
+,10.2,"Explain what this difference in proportions means in real life, in a way that any high school student could understand.",0,0,0,0,0,0
+,10.3,"How close was your estimate based on random sampling?
+
+",1,0,1,0,0,0
+,10.4,"We've been pretending that we didn't have all of the data, so we had to use random sampling in order to estimate our population proportions. Explain why in real life we would NEED to use random sampling to do a similar analysis in a different situation.
+
+",0,0,0,0,0,0
+,10.5,Based on this data it seems that black drivers are disproportionately pulled over in Evanston. How do you feel about that?,0,0,0,0,0,0
+,10.6,"What additional data could we use to explore this issue more deeply? 
+And/Or
+What are some things that we could do to begin to address this?
+And/Or
+What are some other questions that we could investigate using this (or other) data?",0,0,0,0,0,0
+,11.1,"Identify each of the following : n1,n2,p^1,p^2",0,0,0,0,0,0
+,11.2,"Based on the sample results, which vaccine seems to be more effective? Provide evidence to support your reasoning. 
+
+",0,0,0,0,0,0
+,11.3,"Let's analyze the difference between these two sample proportions. Calculate p^1−p^2
+
+",0,0,0,0,0,0
+,11.4,"For the standard deviation formula, we need to think back to our work with combining random variables in Chapter 6. Remember: you have a formula for the standard deviation of p^1−p^2 on your formula sheet!
+
+ 
+
+Calculate this value for our scenario using your answers from question 11.1",0,0,0,0,0,0
+,11.5,"Later on, we found out that the two vaccines are equally effective. What is the probability of observing a difference in sample proportions greater than the one shown in the table? Be sure to check the Normal condition for each population.",0,0,0,0,0,0
+,,,,,,,,
+,1.1,"In the NetLogo model above, press ""SETUP"" and then ""Preset 1"". Describe the shape of this distribution. 
+
+",1,0,1,1,0,0
+,1.2,"Set the sample-size slider to 1. Try running the model by clicking the ""go"" button, which will run the model continuously until you click ""go"" again to stop. What do you notice about the shape of  ""Sample-Data Distribution""? ",1,0,1,1,0,0
+,1.3,"If we ran the model for 100,000 or more samples (Preset 1, sample size = 1), what would the shape of the ""Sample-Data-Distribution"" be?",1,0,1,0,0,0
+,1.4,"Reset the model by clicking ""setup"" and ""Preset 1"". Set the ""sample-size"" slider to 5. Run the model by clicking ""go"" and note your observations below. How is this sample data distribution different from a sample size of 1?",1,0,1,1,0,0
+,1.5,"What's the takeaway? Explain the ""big picture"" idea of this page in a sentence of two.",1,0,1,0,0,0
+,2.1,"Using a sample size of 5, which of the preset populations produces a sampling distribution that is the least ""normal"" looking? Explain how you arrived at your conclusion.",1,0,1,1,0,0
+,2.2,"Using the preset from your previous answer, start with a sample size of 10 and let the model run for at least 200 samples. Record the value of ""std-dev-means"" and the shape of the ""sample-data-distribution"".",1,0,1,1,0,0
+,2.3,Reset the model and increase the sample size to 20. Run the model for at least 200 samples. What do you notice about the std-dev-means and the shape of the sample-data-distribution?,1,0,1,1,0,0
+,2.4,Reset the model and increase the sample size to 40. Run the model for at least 200 samples. What do you notice about the std-dev-means and the shape of the sample-data-distribution?,1,0,1,1,0,0
+,2.5,"Compare the ""std-dev-means"" between a sample size of 10 and a sample size of 40. By what factor was the standard deviation reduced? (Hint: divide the two numbers to create a fraction)",1,0,1,0,0,0
+,2.6,"At a certain point, the sample-data-distribution becomes approximately Normal. What do you think is the cut-off for a sample size that produces an approximately Normal sampling distribution?",0,0,1,0,0,0
+,3.1,"Mr. Mills takes a sample of only 10 people and records their score on a particular IQ test. He is confident that he can make inferences about this sample using a Normal approximation. Why can he do this, even though his sample size was less than 30?
+
+",0,0,0,0,,0
+,3.2,"In real life, we usually don't know what the population distribution looks like. Why can we make inferences about the population mean based on a large sample size?
+
+",0,0,0,0,0,0
+,4.1,"a) If the filling equipment is functioning properly, what is the probability that the weight of the ore in a randomly selected car will be 70.7 tons or more?  Show your work.
+
+",0,0,0,0,0,0
+,4.2,"b)  Suppose that the weight of ore in a randomly selected car is 70.7 tons.  Would that fact make you suspect that the loading mechanism is overfilling cars?  Justify your answer.
+
+",0,0,0,0,0,0
+,4.3,"c) If the filling equipment is functioning properly, what is the probability that a random sample of 10 cars will have a mean weight of 70.7 tons or more?  Show your work.
+
+",0,0,0,0,0,0
+,4.4,"d) Based on your answer in part (c), if a random sample of 10 cars had a mean ore weight of 70.7 tons, would you suspect that the loading mechanism was overfilling the cars?  Justify your answer.
+
+",0,0,0,0,0,0
+,5.1,What would be the shape of the sampling distribution of x¯?,0,0,0,0,0,0
+,5.2,"Without doing any calculations, which of the following has a HIGHER probability:
+
+1 randomly selected student taking more than 90 minutes to complete the final exam (meaning that they did not turn in the exam before the 90 minutes expired)
+30 randomly selected students having a sample mean greater than 90 minutes
+Justify your reasoning using appropriate statistical language.",0,0,0,0,0,0
+,5.3,"Explain why you cannot use a Normal distribution to calculate the probability of the first event in Question 5.2
+
+",0,0,0,0,0,0
+,6.1,"We randomly select 25 students from AKHS and 30 students from PHS.  Use the information given to describe the sampling distributions of the average ACT scores for the two samples.
+
+",0,0,0,0,0,0
+,6.2,"Suppose we took a sample of 25 students from AKHS and a sample of 30 students from PHS and found the difference in the sample means. Describe the sampling distribution of the difference in mean ACT scores (AKHS – PHS). Be sure to address shape, mean and standard deviation.
+
+",0,0,0,0,0,0
+,6.3,"Calculate the probability that random sample of 25 AKHS students has a higher mean ACT score than the random sample of 30 PHS students. Upload scanned image of work. 
+
+",0,0,0,0,0,0
+,7.1,What is the shape of the sampling distribution of x¯M−x¯W? Why?,0,0,0,0,0,0
+,7.2,Find the mean and standard deviation of the sampling distribution of x¯M−x¯W,0,0,0,0,0,0
+,7.3,"Calculate the probability that the average height of the 16 randomly selected men is less than the average height of the 9 randomly selected women.
+
+",0,0,0,0,0,0

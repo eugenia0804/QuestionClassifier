@@ -1,0 +1,49 @@
+Purpose,"This codebook describes six categories of Computational Thinking (CT) practices and explains how questions in CT integrated lessons should be coded to identify if they prompt students to engage in CT practices. This codebook is designed to identify questions that have potential to engage students in a CT practice. We do not claim that a positively coded question will engage all the students in the CT practice/s it is positively coded for. Also, our coding scheme is designed to include questions that prompt simple engagement which may be intended for pedagogical purposes.",,,,
+,,,,,
+Practices,Subpractices,Explanation,Examples,,
+Computational Modeling and Simulation Practices,Using computational models to understand a phenomenon,A question that prompts students to use or reason about a computational model directly or indirectly to engage in one or more subpractices. An indirect engagement would involve students reasoning about a phenomenon in the context of a model based on their prior use of the model in a unit.,Let’s use that test tube model to see how DNA gets made. What patterns do you see after DNA is replicated?,"Press ""Set up"" and ""Go"" to run the simulation. What do you see happening? Does this make sense- remember, there is air resistance? Leave the initial settings with the inner two turtles having mass of 2 and all the outer turtles having mass of 1. Does it make sense that the inner turtles move faster at the beginning?
+
+
+
+
+",Why would someone want to change the 'world-size'?
+,Using computational models to hypothesize and test predictions,,,,
+,Using a computational tool to understand a system's compenents and dynamics,,,,
+,Using a model to understand how positive and negative feedback function and impact a system,,,,
+,Assessing computational models,,,,
+,Modifying a computational model to better fit a phenomenon,,,,
+,Designing and constructing computational models,,,,
+Algorithm Practices,Using an algorithm to solve a problem,A question that prompts students to engage in one or more of the subpractices. Modifying or designing an algorithm might involve pseudo-code only but can also include implementing it in a computational language (e.g. text or block based code).,"Using the information from this page and the last one, write out the algorithm (the steps) the ribosome must follow to put together the amino acids in the correct order to make a protein based on the mRNA sequence.","The NetTango models have coding blocks in two procedures called the 'setup procedure' and the 'go procedure'. First drag the setup block in the work space to it's left and drag the go block to it's own work space. By doing so you have initiated both setup and go procedures in the actual code. Now you have to figure out the sequence of steps in the actual code and attach the remaining blocks to these procedures and run the model. The model gives the desired results if you have the right sequence of steps in both procedures. Note that there's one block in the go procedure that's unnecessary and should not be included, figure out which one.","In the ""Go"" section of code, look for Newton's 2nd Law lines and the lines for air resistance.  
+Set the air resistance coefficient to 0. What should happen?  
+Would the mass matter when the coefficient is 0?"
+,Selecting an appropriate algorithm to solve a problem,,,,
+,"Assessing the efficiency, correctness, and clarity of an algorithm",,,,
+,Modifying an algorithm to better address a problem,,,,
+,Designing and constructing algorithms,,,,
+Computational Data Practices,Using computation to collect and create data,A question that prompts students to enagage in one or more of the subpractices. The data can be quantitative or qualitative. Writing a qualitative observation that requires use of a computational tool and computational representations should be considered as using computation to collecting data.,Let’s use that test tube model to see how DNA gets made. What patterns do you see after DNA is replicated?,"After you have run the program, which two graphs are similar? Why must this be so?",You have information from a graph and what you saw happen in the Model from question 8.  How and why did the numbers change the way they did?
+,"Using computation to transform, manipulate, and clean data",,,,
+,Using computation to analyze data,,,,
+,Using computation to explore and draw insight from large data sets,,,,
+,Modifying a computational approach to better fit data,,,,
+,Creating computational visualizations of data to discover hidden meaning and patterns,,,,
+Computational Visualization Practices,Using a computational visualization to understand a phenomenon,A question that prompts students to engage in one or more of the subpractices. The visualization should be created via computation. Students should either see the creation (like through running the model) or create the visualization themselves (put blocks together to create the visual).,"Based on your data, what is the trend of eumelanin levels with respect to hair color?","As mentioned above, in this model you are dragging the enzymes to the place they're needed and you can drag the nucleotides to where they need to go.  In an actual cell, there is not someone dragging things where they need to be.  Think back to the original replication/transcription model you worked with (pictured below) and how the nucleotides got to the right place.  Which model do you think is more accurate?  Why?","Place the cursor at the peak of the speed vs. time graph and note the time. 
+Now move the cursor on the distance vs. time graph until you get to the same time on d vs. t graph. Note down the displacement of the car at this time. Likewise find the displacement of the car when it finally comes to a stop. Measure and compare the displacement of the car during acceleration and during deceleration, explain in which region did the car have more displacement, why?"
+,Using a computational visualization to identify and predict trends,,,,
+,Assessing computational visualizations,,,,
+,Modifying a computational visualization to better fit a phenomenon/ data,,,,
+,Designing and constructing computational visualizations,,,,
+Computational Problem Solving Practices,Choosing effective computational tools to solve a problem,"A question that specifically asks students to engage in one or more of the subpratices. Problem solving must directly involve considering a computational context, which could be of  a model or any other computational tool. The process of arriving at a solution should involve transformation of an input (which can be a starting state) into an output (which can be an ending state or a trajectory) using computation.","Your challenge is to figure out which amino acids in this sequence are hydrophilic and which are hydrophobic (blue circles vs. green squares).  Assuming that the protein is floating in a watery environment, how will you use the model to address your challenge?","Create a scenario of a hesitant driver who initially speeds up, slows down and then speeds up again before he finally comes to a stop. 
+Run the model and investigate this scenario of a hesitant driver. 
+Post the screenshot of the graph in the answer section.
+
+explanation: this involves transforming the starting condition into a trajectory of a hesitant driver","The NetTango models have coding blocks in two procedures called the 'setup procedure' and the 'go procedure'. First drag the setup block in the work space to it's left and drag the go block to it's own work space. By doing so you have initiated both setup and go procedures in the actual code. Now you have to figure out the sequence of steps in the actual code and attach the remaining blocks to these procedures and run the model. The model gives the desired results if you have the right sequence of steps in both procedures. Note that there's one block in the go procedure that's unnecessary and should not be included, figure out which one."
+,Preparing problems for a computational solution,,,,
+,Decomposing complex problems into smaller solvable pieces,,,,
+,Using a computational tool to solve a problem,,,,
+,Systematically troubleshooting a solution,,,,
+Programming Practices,Reading and understanding code,A question that specifically engages students in one or more of the subpractices. It should be in the context of code that is directly understood by a computational programming environment or a tool. ,"Let’s fix the bug!  If you want to change something in the code, open the NetLogo code bar.  If you want to change something in the readouts, click on the lock icon on the top left to change the mode to “authoring” (you’ll need to change it back before you’re done).  What did you do to fix the bug?  Did it work?","In the ""Go"" section of code, look for Newton's 2nd Law lines and the lines for air resistance.  Set the air resistance coefficient to 0. What should happen?  Would the mass matter when the coefficient is 0?","How would you give the sheet of masses an initial velocity upwards? If it had a positive initial velocity, what would the motion look like?"
+,Modifying code,,,,
+,"Writing elegant, readable, and maintainable code",,,,
+,Debugging programs,,,,
+,Developing modular solutions and abstractions,,,,
+,Iteratively designing and testing programs,,,,
