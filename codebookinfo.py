@@ -1,9 +1,11 @@
 """
     Input: Codebook, index
-    Output: Prompt (txt)
+    Returns:
+            text: Prompt that can be feed in GPT about codebook information
     
     This function takes in a codebook dictionary and an index,
     returns a prompt section that explain the practice details as a string.
+
 """
 def get_codebookinfo(dic,index):
         # Extract the name of the practice at the given index

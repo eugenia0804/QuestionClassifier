@@ -1,9 +1,10 @@
 """
-    Input: None
-    Output: Codebook (.json)
+    Returns:
+         json: Codebook which stores the information about the name of the practice, subpractices, and examples
     
     This file contains a dictionary of coding practices and their subpractices and example questions.
     To use this codebook, import this file and call the `get_codebook()` function.
+
 """
 
 import pandas as pd
