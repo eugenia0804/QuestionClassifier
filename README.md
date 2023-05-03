@@ -1,9 +1,9 @@
 # Question-Classifier
 
-Files:
+Files:\\
 
-codebook.py
-questionbook.py
-GPT_processer.py
+codebook.py\\
+questionbook.py\\
+GPT_processer.py\\
 
 main.py
