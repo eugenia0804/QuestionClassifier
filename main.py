@@ -1,18 +1,20 @@
 from codebook import get_codebook
 from codebookinfo import get_codebookinfo
 from question import get_questions, questions_prompt
+from result import disagreement_calculator
 
 import openai
 openai.api_key = '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'
 model_engine = "text-davinci-003"
 
+codebook = get_codebook() # get the codebook dictionary
+questions = get_questions()  # get the questions dictionary
+
 def classify_questions(practice_index,num_q):
-    codebook = get_codebook() # get the codebook dictionary
-    codeinfo = get_codebookinfo(codebook,practice_index) 
-    questions = get_questions()  # get the questions dictionary
-    questioninfo = questions_prompt(questions, num_q)
     
     completions = openai.Completion.create(
+        codeinfo = get_codebookinfo(codebook,practice_index) 
+        questioninfo = questions_prompt(questions, num_q)
         engine = model_engine,  # specify the GPT-3.5 engine to use
         prompt = codeinfo + '\n \n' + questioninfo,  # concatenate the code and question prompts
         max_tokens=100,  # specify the maximum number of tokens to generate for each completion
@@ -27,3 +29,6 @@ def classify_questions(practice_index,num_q):
 
    
 print(classify_questions(0,10))
+
+agreement = disagreement_calculator(questions, codebook, 1, 13)
+print(f"{agreement} percent of result agree with each other.")
