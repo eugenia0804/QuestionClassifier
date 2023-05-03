@@ -1,12 +1,15 @@
-# Question-Classifier
+# CCL-LLM Question Classifier
 
-Files:
+codebook.py: \
+Load raw csv file -> Structured Json file storing all the relavent information
 
-codebook.py
+codebookinfo.py: \
+Create the prompt used to teach GPT about the meaning of the category
 
-questionbook.py
+question.py: \
+Load raw csv file and forming up prompt providing GPT the questions needed to be categorized.
 
-GPT_processer.py
+main.py: \
+Feed the composite prompt into GPT and get the answers.
 
 
-main.py
