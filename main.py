@@ -21,7 +21,7 @@ def classify_questions(practice_index,num_q):
         n=1,  
         stop=None,  
         temperature=0,  # specify the sampling temperature for the completion
-    )
+        )
     answers = completions.choices[0].text.strip().split("\n")  # extract the generated answers from the completion
     
     # return a list of the generated answers in a form of list consisted of 'Yes' or 'No'
