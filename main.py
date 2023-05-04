@@ -1,9 +1,11 @@
 from codebook import get_codebook
 from codebookinfo import get_codebookinfo
 from question import get_questions, questions_prompt
+import os
 
 import openai
-openai.api_key = ''
+key = os.environ['OpenAI_api_key']
+openai.api_key = key
 model_engine = "text-davinci-003"
 
 codebook = get_codebook() # get the codebook dictionary
