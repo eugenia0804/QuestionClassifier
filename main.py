@@ -3,7 +3,7 @@ from codebookinfo import get_codebookinfo
 from question import get_questions, questions_prompt
 
 import openai
-openai.api_key = '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'
+openai.api_key = ''
 model_engine = "text-davinci-003"
 
 codebook = get_codebook() # get the codebook dictionary
@@ -24,7 +24,6 @@ def classify_questions(practice_index,num_q):
     
     # return a list of the generated answers in a form of list consisted of 'Yes' or 'No'
     return [a.split(": ")[-1] for a in answers] 
-
 
 
 def disagreement_calculator(df_q, codebook,practice_index,num_q):
@@ -48,7 +47,7 @@ def disagreement_calculator(df_q, codebook,practice_index,num_q):
   return 1-fraction
 
 
-print(classify_questions(0,1))
+print(classify_questions(0,2))
 
 agreement = disagreement_calculator(questions, codebook, 1, 13)
 print(f"{agreement} percent of result agree with each other.")
