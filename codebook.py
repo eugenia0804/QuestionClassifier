@@ -34,7 +34,8 @@ def get_codebook():
     codebook = {}
     for name, group in grouped:
         practice = group['Practices'].tolist()[0]
-        codebook[practice] = {'Subpractices':0 ,'Examples': 0}
+        codebook[practice] = {'Explanation':0, 'Subpractices':0 ,'Examples': 0}
+        codebook[practice]['Explanation'] = group['Explanation'].tolist()[0]
         subpractices_list = group['Subpractices'].tolist()
         codebook[practice]['Subpractices'] = subpractices_list
         examples_list = []
@@ -44,3 +45,5 @@ def get_codebook():
         codebook[practice]['Examples'] = examples_list
     
     return codebook
+
+print(get_codebook())
