@@ -20,7 +20,7 @@ def classify_questions(practice_index,num_q):
         max_tokens=100,  # specify the maximum number of tokens to generate for each completion
         n=1,  
         stop=None,  
-        temperature=0,  # specify the sampling temperature for the completion
+        temperature=0.1,  # specify the sampling temperature for the completion
         )
     answers = completions.choices[0].text.strip().split("\n")  # extract the generated answers from the completion
     

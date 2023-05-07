@@ -34,7 +34,7 @@ def questions_prompt(num_question):
         added_prompt = f"\n{i+1}: {question_text}"
         prompt = prompt + added_prompt
          # Create a string that describes the format of the expected output
-        output_example = "\n \nReturn the answer in the following format:\n1: Yes\n2: No\n3: Unknown etc."
+        output_example = "\n \nReturn the answer in the following format:\n1. Yes or No?:     Explanation:"
          # Add the output example string to the overall prompt string
         prompt = prompt + output_example
     return prompt

@@ -45,5 +45,3 @@ def get_codebook():
         codebook[practice]['Examples'] = examples_list
     
     return codebook
-
-print(get_codebook())
