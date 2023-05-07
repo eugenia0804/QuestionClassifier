@@ -1,37 +1,56 @@
 from codebook import get_codebook
 from codebookinfo import get_codebookinfo
-from question import get_questions, questions_prompt
+from question import get_questions
+from questioninfo import questions_prompt
 import os
-import json
+import pandas as pd
 
 import openai
-key = os.environ['OpenAI_api_key']
+
+key = os.environ['OpenAI']
 openai.api_key = key
 model_engine = "text-davinci-003"
 
 codebook = get_codebook() # get the codebook dictionary
 questions = get_questions()  # get the questions dictionary
-answer = {}
 
 def classify_questions(practice_index,num_q):
     codeinfo = get_codebookinfo(codebook,practice_index) 
     questioninfo = questions_prompt(num_q)
     completions = openai.Completion.create(
         engine = model_engine,  # specify the GPT-3.5 engine to use
-        prompt = codeinfo + '\n \n' + questioninfo,  # concatenate the code and question prompts
-        max_tokens=100,  # specify the maximum number of tokens to generate for each completion
+        prompt = codeinfo + questioninfo,  # concatenate the code and question prompts
+        max_tokens=num_q*50,  # specify the maximum number of tokens to generate for each completion
         n=1,  
         stop=None,  
         temperature=0.1,  # specify the sampling temperature for the completion
         )
-    answers = completions.choices[0].text.strip().split("\n")  # extract the X^TXgenerated answers from the completion
-    
+    result = completions.choices[0].text.strip().split("\n")  # extract the X^TXgenerated answers from the completion
+    print(codeinfo + questioninfo)
     # return a list of the generated answers in a form of list consisted of 'Yes' or 'No'
-    return answers
+    return result
 
 
-def disagreement_calculator(df_q, codebook,practice_index,num_q):
-    
+def store_result(index,question_num): 
+  results = classify_questions(index,question_num)
+  result_df = pd.DataFrame(columns=['Question Number', 'Result', 'Explanation','Correct Answer'])
+  
+  # Populate the DataFrame with data from the results list
+  for i, result in enumerate(results):
+      question_number, result_explanation = result.split(': ', 1)
+      result_str, explanation = result_explanation.split('. Explanation: ')
+      practice_name = list(codebook.keys())[index]
+      correct_ans = questions[practice_name][i]
+      result_df.loc[i] = [question_number, result_str, explanation,correct_ans]
+      
+  result_df.to_csv('Result_first10.csv', index=False)
+  
+store_result(1,10)
+  
+
+
+'''
+def disagreement_calculator(df_q, codebook,practice_index,num_q): 
   # Get the name of the practice from the codebook using the practice_index
   practice_name = list(codebook.keys())[practice_index]
   results = classify_questions(practice_index,num_q)
@@ -49,9 +68,7 @@ def disagreement_calculator(df_q, codebook,practice_index,num_q):
   # Calculate the fraction of disagreements and return the agreement score (1 - fraction)
   fraction = count/num_q
   return 1-fraction
+'''
 
-
-print(classify_questions(0,2))
-
-agreement = disagreement_calculator(questions, codebook, 1, 13)
-print(f"{agreement} percent of result agree with each other.")
+# agreement = disagreement_calculator(questions, codebook, 1, 13)
+# print(f"{agreement} percent of result agree with each other.")
