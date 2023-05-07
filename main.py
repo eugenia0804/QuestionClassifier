@@ -2,6 +2,7 @@ from codebook import get_codebook
 from codebookinfo import get_codebookinfo
 from question import get_questions, questions_prompt
 import os
+import json
 
 import openai
 key = os.environ['OpenAI_api_key']
@@ -10,6 +11,7 @@ model_engine = "text-davinci-003"
 
 codebook = get_codebook() # get the codebook dictionary
 questions = get_questions()  # get the questions dictionary
+answer = {}
 
 def classify_questions(practice_index,num_q):
     codeinfo = get_codebookinfo(codebook,practice_index) 
@@ -22,10 +24,10 @@ def classify_questions(practice_index,num_q):
         stop=None,  
         temperature=0.1,  # specify the sampling temperature for the completion
         )
-    answers = completions.choices[0].text.strip().split("\n")  # extract the generated answers from the completion
+    answers = completions.choices[0].text.strip().split("\n")  # extract the X^TXgenerated answers from the completion
     
     # return a list of the generated answers in a form of list consisted of 'Yes' or 'No'
-    return [a.split(": ")[-1] for a in answers] 
+    return answers
 
 
 def disagreement_calculator(df_q, codebook,practice_index,num_q):
