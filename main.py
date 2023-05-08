@@ -43,7 +43,7 @@ def store_result(index,question_num):
       correct_ans = questions[practice_name][i]
       result_df.loc[i] = [question_number, result_str, explanation,correct_ans]
       
-  result_df.to_csv('Result_first10.csv', index=False)
+  result_df.to_csv('Results/Result_first10.csv', index=False)
   
 store_result(1,10)
   
