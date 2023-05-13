@@ -17,6 +17,7 @@ questions = get_questions()  # get the questions dictionary
 def classify_questions(practice_index,num_q):
     codeinfo = get_codebookinfo(codebook,practice_index) 
     questioninfo = questions_prompt(num_q)
+    prompt = codeinfo + questioninfo
     completions = openai.Completion.create(
         engine = model_engine,  # specify the GPT-3.5 engine to use
         prompt = codeinfo + questioninfo,  # concatenate the code and question prompts
@@ -28,11 +29,11 @@ def classify_questions(practice_index,num_q):
     result = completions.choices[0].text.strip().split("\n")  # extract the X^TXgenerated answers from the completion
     print(codeinfo + questioninfo)
     # return a list of the generated answers in a form of list consisted of 'Yes' or 'No'
-    return result
+    return prompt , result
 
 
 def store_result(index,question_num): 
-  results = classify_questions(index,question_num)
+  [prompt, results] = classify_questions(index,question_num)
   result_df = pd.DataFrame(columns=['Question Number', 'Result', 'Explanation','Correct Answer'])
   
   # Populate the DataFrame with data from the results list
@@ -40,9 +41,12 @@ def store_result(index,question_num):
       question_number, result_explanation = result.split(': ', 1)
       result_str, explanation = result_explanation.split('. Explanation: ')
       practice_name = list(codebook.keys())[index]
+      question_name = questions['Question'][i]
       correct_ans = questions[practice_name][i]
       result_df.loc[i] = [question_number, result_str, explanation,correct_ans]
-      
+  
+  with open('prompt.txt', 'w') as file:
+    file.write(prompt)
   result_df.to_csv('Results/Result_first10.csv', index=False)
   
 store_result(1,10)
