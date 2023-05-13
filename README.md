@@ -15,4 +15,8 @@ Create teh prompt used to feed gpt the information of the questions needed to be
 main.py: \
 Feed the composite prompt into GPT and get the answers.
 
+# Output Structure:
 
+interation #n : prompt.txt\
+                raw_first_n.txt\
+                first_n.csv\
