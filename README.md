@@ -17,6 +17,7 @@ Feed the composite prompt into GPT and get the answers.
 
 # Output Structure:
 
-interation #n : prompt.txt\
-                raw_first_n.txt\
-                first_n.csv\
+interation #n : \
+prompt.txt\
+raw_first_n.txt\
+first_n.csv
