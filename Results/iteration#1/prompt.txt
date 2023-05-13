@@ -1,0 +1,24 @@
+The name of the practice is 'Computational Modeling and Simulation Practices', which is consisted of subpractices includes 
+'Using computational models to understand a phenomenon',
+'Using computational models to hypothesize and test predictions',
+'Using a computational tool to understand a system's compenents and dynamics',
+'Using a model to understand how positive and negative feedback function and impact a system',
+'Assessing computational models',
+'Modifying a computational model to better fit a phenomenon',
+'Designing and constructing computational models.
+ 
+Determine whether the following 10 questions reflect the given practice or not (Do not try to answer the questions):
+
+1: What is the parameter of interest? What symbol is used to represent this value?
+2: What is the statistic obtained from the sample? What symbol is used to represent this value?
+3: How many samples of size 2 can be taken from this population?
+4: What is the parameter of interest for this situation?
+5: What statistic are we using to estimate the parameter of interest for this situation?
+6: Do you think taking a sample this size from this population effectively estimates the mean score of the population?
+7: Calculate the sample mean for all possible samples of size 2 from this population. 
+8: Create a dotplot of your results from question #2. Create your sketch below.
+9: In most real-life situations, we cannot create the dotplot of all possible samples of size n from the entire population (size N). Why not?
+10: Click "setup" and then "collect sample". What did the model do?
+ 
+Return the answer in the following format:
+[Question Number]: [Yes or No?] Explanation:[This question is asking for..., which reflect...]

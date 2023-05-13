@@ -41,13 +41,12 @@ def store_result(index,question_num):
       question_number, result_explanation = result.split(': ', 1)
       result_str, explanation = result_explanation.split('. Explanation: ')
       practice_name = list(codebook.keys())[index]
-      question_name = questions['Question'][i]
       correct_ans = questions[practice_name][i]
-      result_df.loc[i] = [question_number, result_str, explanation,correct_ans]
+      result_df.loc[i] = [question_number, result_str, explanation, correct_ans]
   
-  with open('prompt.txt', 'w') as file:
+  with open('Results/iteration#1/prompt.txt', 'w') as file:
     file.write(prompt)
-  result_df.to_csv('Results/Result_first10.csv', index=False)
+  result_df.to_csv('Results/iteration#1/first10.csv', index=False)
   
 store_result(1,10)
   
