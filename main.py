@@ -46,9 +46,11 @@ def store_result(index,question_num):
   
   with open('Results/iteration#1/prompt.txt', 'w') as file:
     file.write(prompt)
-  result_df.to_csv('Results/iteration#1/first10.csv', index=False)
+  with open('Results/iteration#1/raw_results.txt', 'w') as file:
+    file.write(results)
+  result_df.to_csv('Results/iteration#1/first3.csv', index=False)
   
-store_result(1,10)
+store_result(1,3)
   
 
 
