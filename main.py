@@ -56,7 +56,7 @@ def store_result(index,start_q,end_q):
       
   result_df.to_csv('Results/iteration#1/20to30.csv', index=False)
   
-store_result(index = 0, start_q = 20,end_q = 30)
+store_result(index = 2, start_q = 20,end_q = 30)
   
 
 
