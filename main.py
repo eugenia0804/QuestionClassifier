@@ -32,6 +32,7 @@ def classify_questions(practice_index,start_q,end_q):
 
 
 def store_result(index,start_q,end_q): 
+
   [prompt, results, result_template] = classify_questions(index,start_q,end_q)
   result_df = result_template
   
@@ -40,10 +41,13 @@ def store_result(index,start_q,end_q):
   with open('Results/iteration#1/raw_results_20to30.txt', 'w') as file:
     file.write(str(results))
 
+
+
   # Populate the DataFrame with data from the results list
   for i, result in enumerate(results):
       question_number, result_explanation = result.split(': ', 1)
       result_str, explanation = result_explanation.split('. Explanation: ')
+      print(codebook.keys())
       practice_name = list(codebook.keys())[index]
       correct_ans = questions[practice_name][i]
       result_df.loc[i, 'Result'] = result_str
@@ -52,7 +56,7 @@ def store_result(index,start_q,end_q):
       
   result_df.to_csv('Results/iteration#1/20to30.csv', index=False)
   
-store_result(index = 2, start_q = 20,end_q = 30)
+store_result(index = 0, start_q = 20,end_q = 30)
   
 
 

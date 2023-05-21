@@ -14,4 +14,7 @@ def get_questions():
     df_q = df_q.dropna(subset=['Question'])
     # Reindex the lines of the dataset
     df_q = df_q.reset_index(drop=True)
+    df_q.columns = df_q.columns.str.replace('\n', ' ')
     return df_q
+
+get_questions()
