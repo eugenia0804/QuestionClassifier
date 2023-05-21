@@ -1,0 +1,29 @@
+The name of the practice is 'Computational Modeling and Simulation Practices', which is consisted of subpractices includes 
+'Using computational models to understand a phenomenon',
+'Using computational models to hypothesize and test predictions',
+'Using a computational tool to understand a system's compenents and dynamics',
+'Using a model to understand how positive and negative feedback function and impact a system',
+'Assessing computational models',
+'Modifying a computational model to better fit a phenomenon',
+'Designing and constructing computational models.
+ 
+Determine whether the following 15 questions reflect the given practice or not (Do not try to answer the questions):
+
+1: What is the parameter of interest? What symbol is used to represent this value?
+2: What is the statistic obtained from the sample? What symbol is used to represent this value?
+3: How many samples of size 2 can be taken from this population?
+4: What is the parameter of interest for this situation?
+5: What statistic are we using to estimate the parameter of interest for this situation?
+6: Do you think taking a sample this size from this population effectively estimates the mean score of the population?
+7: Calculate the sample mean for all possible samples of size 2 from this population. 
+8: Create a dotplot of your results from question #2. Create your sketch below.
+9: In most real-life situations, we cannot create the dotplot of all possible samples of size n from the entire population (size N). Why not?
+10: Click "setup" and then "collect sample". What did the model do?
+11: Press the "collect sample" button 30 times. Drag the word "Mean" from the table to the horizontal axis of the empty graph. The graph is starting to take shape, but it cannot be called a sampling distribution yet... Why not?
+12: A school administrator took a sample of 2 AP statistics students and found their average AP test score to be 1.5. Based on that sample, the Administrator is claiming that the mean test score for all AP stats students at ETHS is 1.5. Do you have substantial evidence to refute their claim? You just created a statistical model - use it to explain to the administrator that their estimate is probably wrong.
+13: What was wrong with the administrator's sample?
+14: On the left side of the screen you see a table. Click on one of the cells in the row with "index" 17. This should highlight one single dot on the dotplot. Explain what that dot represents in the context of the situation.
+15: Suppose an administrator is claiming that the true Mean score of the population is 3.2. Do you have convincing evidence to refute their claim? Explain.
+ 
+Return the answer in the following format:
+[Question Number]: [Yes or No?] Explanation:[This question is asking for..., which reflect...]

@@ -9,15 +9,19 @@ from question import get_questions
 import pandas as pd
 
 # Define a function that creates a prompt string for a given number of questions
-def questions_prompt(num_question):
+def questions_prompt(start_q,end_q):
     # Call the get_questions function to retrieve a dataset of questions
     df_q = get_questions()
     # Create a prompt string that includes the number of questions to be classified
-    prompt = f"Determine whether the following {num_question} questions reflect the given practice or not (Do not try to answer the questions):\n"
-    
+    prompt = f"Determine whether the following {end_q-start_q} questions reflect the given practice or not (Do not try to answer the questions):\n"
+    result_df = pd.DataFrame(columns=['Question Number','Question', 'Result', 'Explanation','Correct Answer'])
+    question_num = []
+    questions = []
     # Loop through each question in the dataset
-    for i in range (0,num_question):
+    for i in range (start_q-1,end_q):
         question_text = df_q['Question'][i]
+        questions.append(question_text)
+        question_num.append(i+1)
          # Create a string that includes the index number and text of the current question
         added_prompt = f"\n{i+1}: {question_text}"
         prompt = prompt + added_prompt
@@ -25,4 +29,13 @@ def questions_prompt(num_question):
     output_example = "\n \nReturn the answer in the following format:\n[Question Number]: [Yes or No?] Explanation:[This question is asking for..., which reflect...]"
      # Add the output example string to the overall prompt string
     prompt = prompt + output_example
-    return prompt
+    result_df['Question Number'] = question_num
+    result_df['Question'] = questions
+    return prompt, result_df
+
+'''
+[questioninfo, result_template] = questions_prompt(3)
+print(result_template)
+'''
+
+

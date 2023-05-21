@@ -12,7 +12,7 @@ import numpy as np
 
 def get_codebook():
     #Load the codebook data file from a URL
-    code_book_url = 'https://raw.githubusercontent.com/eugenia0804/Question-Classifier/main/Copy%20of%20Bio%20Unit%20Data%20Coding%20-%20Codebook.csv'
+    code_book_url = 'https://raw.githubusercontent.com/eugenia0804/Question-Classifier/main/Dataset/BioUnitDataCoding-Codebook.csv'
     df_code = pd.read_csv(code_book_url, skiprows = 2)
 
     # Rename some of the columns to be more descriptive
