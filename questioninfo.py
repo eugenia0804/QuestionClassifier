@@ -7,6 +7,15 @@
 """
 from question import get_questions
 import pandas as pd
+import json
+
+template = {
+    "Question_number": {
+        "Question": "Original text of the question",
+        "Answer": "Yes/No",
+        "Explanation": "This question is asking for..., which reflects..."
+    }
+}
 
 # Define a function that creates a prompt string for a given number of questions
 def questions_prompt(start_q,end_q):
@@ -14,7 +23,6 @@ def questions_prompt(start_q,end_q):
     df_q = get_questions()
     # Create a prompt string that includes the number of questions to be classified
     prompt = f"Determine whether the following {end_q-start_q} questions reflect the given practice or not (Do not try to answer the questions):\n"
-    result_df = pd.DataFrame(columns=['Question Number','Question', 'Result', 'Explanation','Correct Answer'])
     question_num = []
     questions = []
     # Loop through each question in the dataset
@@ -26,12 +34,10 @@ def questions_prompt(start_q,end_q):
         added_prompt = f"\n{i+1}: {question_text}"
         prompt = prompt + added_prompt
          # Create a string that describes the format of the expected output
-    output_example = "\n \nReturn the answer in the following format:\n[Question Number]: [Yes or No?] Explanation:[This question is asking for..., which reflect...]"
+    output_example = f"\n \nReturn the answer in the a JSON format:\n{json.dumps(template)}"
      # Add the output example string to the overall prompt string
     prompt = prompt + output_example
-    result_df['Question Number'] = question_num
-    result_df['Question'] = questions
-    return prompt, result_df
+    return prompt
 
 '''
 [questioninfo, result_template] = questions_prompt(3)
