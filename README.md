@@ -18,9 +18,8 @@ Create teh prompt used to feed gpt the information of the questions needed to be
 Feed the composite prompt into GPT and get the answers.
 
 
-## Output Structure:
-
-**interation #n:** 
-- **prompt.txt**: The prompt used to feed in GPT.
-- **raw_first_n.txt**: The immediate output created by GPT in a *list* form.
-- **first_n.csv**: Structured results with correspondent correct answers.
+## Iterations:
+- **iteration#1:** \
+    model used: text-davinci-003\
+    prompt composition: practice, subpractice, question, instruction\
+    results: csv (filtered result), raw_XX.txt (raw result), prompt.txt
