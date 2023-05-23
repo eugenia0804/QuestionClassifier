@@ -1,6 +1,6 @@
 # CCL-LLM Question Classifier
 
-## Processor Structure:
+## Main Processor Structure:
 
 - **codebook.py** \
 Load raw csv file -> Structured Json file storing all the relavent information
@@ -29,5 +29,5 @@ Feed the composite prompt into GPT and get the answers.
     model used: text-bison-001\
     prompt composition: practice, subpractice, question, instruction\
     results: result.json (composite result), raw_result.json (raw result), prompt.txt\
-    packages: os, json, langchain
+    packages: os, pandas, json, langchain.llms
 
