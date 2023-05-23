@@ -3,11 +3,11 @@ from codebookinfo import get_codebookinfo
 from question import get_questions
 from questioninfo import questions_prompt
 import os
-import pandas as pd
+import json
 from langchain.llms import GooglePalm
 
 
-#model = GooglePalm(model_name = "text-bison-001", google_api_key = os.environ['PALM'])
+model = GooglePalm(model_name = "text-bison-001", google_api_key = os.environ['PALM'])
 
 codebook = get_codebook() # get the codebook dictionary
 questions = get_questions()  # get the questions dictionary
@@ -29,23 +29,21 @@ def classify_questions(practice_index,start_q,end_q):
 
 def store_result(index,start_q,end_q): 
   [prompt, results] = classify_questions(index,start_q,end_q)
-  with open('Results/iteration#1/prompt_20to30.txt', 'w') as file:
+  with open('Results/iteration#2/prompt_20to30.txt', 'w') as file:
     file.write(prompt)
-  with open('Results/iteration#1/raw_results_20to30.txt', 'w') as file:
-    file.write(str(results))
-
+  with open('Results/iteration#2/raw_results_20to30.json', 'w') as file:
+    json.dump(results, file)
+    
+  final_result = {}
   # Populate the DataFrame with data from the results list
   for i, result in enumerate(results):
-      question_number, result_explanation = result.split(': ', 1)
-      result_str, explanation = result_explanation.split('. Explanation: ')
-      print(codebook.keys())
-      practice_name = list(codebook.keys())[index]
-      correct_ans = questions[practice_name][i]
-      result_df.loc[i, 'Result'] = result_str
-      result_df.loc[i, 'Explanation'] = explanation
-      result_df.loc[i, 'Correct Answer'] = correct_ans
+    
+      '''
+      Insert correct answer into the output dictionary and stored it in final_result
+      '''
       
-  result_df.to_csv('Results/iteration#1/20to30.csv', index=False)
+  with open('Results/iteration#2/results_20to30.json', 'w') as file:
+    json.dump(final_result, file)
   
 #store_result(index = 2, start_q = 20,end_q = 30)
 print(formulate_prompt(2, start_q = 20, end_q = 30))
