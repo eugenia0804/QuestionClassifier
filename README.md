@@ -22,4 +22,5 @@ Feed the composite prompt into GPT and get the answers.
 - **iteration#1:** \
     model used: text-davinci-003\
     prompt composition: practice, subpractice, question, instruction\
-    results: csv (filtered result), raw_XX.txt (raw result), prompt.txt
+    results: csv (filtered result), raw_XX.txt (raw result), prompt.txt\
+    packages: os, pandas, csv, openai
