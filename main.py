@@ -2,12 +2,19 @@ from codebook import get_codebook
 from codebookinfo import get_codebookinfo
 from question import get_questions
 from questioninfo import questions_prompt
-import os
+
 import json
 from langchain.llms import GooglePalm
+import os
 
-
-model = GooglePalm(model_name = "text-bison-001", google_api_key = os.environ['PALM'])
+model = GooglePalm(
+    google_api_key=os.environ['PALM'],
+    temperature=0.2,
+    top_k=None,
+    top_p=None,
+    max_output_tokens=None,
+    n=1
+)
 
 codebook = get_codebook() # get the codebook dictionary
 questions = get_questions()  # get the questions dictionary
