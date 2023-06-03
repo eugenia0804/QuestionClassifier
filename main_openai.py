@@ -2,12 +2,32 @@ from codebook import get_codebook
 from codebookinfo import get_codebookinfo
 from question import get_questions
 from questioninfo import questions_prompt
-
 import json
-from langchain.llms import GooglePalm
-import os
 
-model = GooglePalm(google_api_key=os.environ['GOOGLE_API_KEY'])
+import os
+os.environ["OPENAI_API_TYPE"] = "azure"
+
+import openai
+
+response = openai.Completion.create(
+    engine="text-davinci-003",
+    prompt="This is a test",
+    max_tokens=5
+)
+
+os.environ["OPENAI_API_TYPE"] = "azure"
+os.environ["OPENAI_API_VERSION"] = "2023-05-15"
+os.environ["OPENAI_API_BASE"] = "gpt-35-turbo"
+os.environ["OPENAI_API_KEY"] = 'key'
+
+from langchain.llms import AzureOpenAI
+llm = AzureOpenAI(
+    deployment_name="chatlogo",
+    model_name="text-davinci-003", 
+)
+
+llm("Tell me a joke")
+
 
 
 '''
