@@ -12,8 +12,8 @@ import json
 template = {
     "Question_number": {
         "Question": "Original text of the question",
-        "Answer": "Yes/No",
-        "Explanation": "This question is asking for..., which reflects..."
+        "Reasons": "This question is asking for..., which reflects...",
+        "Answer": "Yes/No"
     }
 }
 
@@ -34,7 +34,8 @@ def questions_prompt(start_q,end_q):
         added_prompt = f"\n{i+1}: {question_text}"
         prompt = prompt + added_prompt
          # Create a string that describes the format of the expected output
-    output_example = f"\n \nReturn the answer in the a JSON format:\n{json.dumps(template)}"
+    #output_example = f"\n \nReturn the answer in the a JSON format:\n{json.dumps(template)}"
+    output_example = f"\n \nReturn the answer in the a JSON format:\n{template}"
      # Add the output example string to the overall prompt string
     prompt = prompt + output_example
     return prompt

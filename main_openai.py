@@ -8,14 +8,13 @@ import os
 os.environ["OPENAI_API_TYPE"] = "azure"
 os.environ["OPENAI_API_VERSION"] = "2023-05-15"
 os.environ["OPENAI_API_BASE"] = "https://chatlogo.openai.azure.com"
-os.environ["OPENAI_API_KEY"] = 'key'
+os.environ["OPENAI_API_KEY"] = os.environ['OPENAI_API_KEY']
 
 from langchain.llms import AzureOpenAI
 llm = AzureOpenAI(
-    deployment_name="davinci-003"
+    deployment_name="davinci-003",
+    max_tokens=3000
 )
-
-llm("Tell me a joke")
 
 
 
@@ -45,7 +44,7 @@ def classify_questions(practice_index,start_q,end_q):
     questioninfo = questions_prompt(start_q,end_q)
     prompt = codeinfo + questioninfo
     print(prompt)
-    result = model(prompt)  
+    result = llm(prompt)  
     return prompt , result
 
 
@@ -67,5 +66,5 @@ def store_result(index,start_q,end_q):
   with open('Results/iteration#2/results_20to30.json', 'w') as file:
     json.dump(final_result, file)
   
-#store_result(index = 2, start_q = 20,end_q = 30)
+store_result(index = 2, start_q = 20,end_q = 23)
 print(formulate_prompt(2, start_q = 20, end_q = 30))

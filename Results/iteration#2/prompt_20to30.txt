@@ -1,0 +1,16 @@
+The name of the practice is 'Algorithm Practices', which is consisted of subpractices includes 
+'Using an algorithm to solve a problem',
+'Selecting an appropriate algorithm to solve a problem',
+'Assessing the efficiency, correctness, and clarity of an algorithm',
+'Modifying an algorithm to better address a problem',
+'Designing and constructing algorithms.
+
+Determine whether the following 3 questions reflect the given practice or not (Do not try to answer the questions):
+
+20: Do you think the mean is a biased estimator? Explain your reasoning.
+21: On the next page we'll use the same model but increase the size of our sample (n). What do you think will happen to the sampling distribution? How will that show up in the model?
+22: On the next page you'll be asked to use the model to see how sample size affects the variability of the sampling distribution. Make a plan for how you'll use the model to investigate this question.
+23: Use your plan and investigate how changing the sample size affects the variability of the sampling distribution (you can show the standard deviation on your graphs in the same way that we showed the mean, go back to page 1 if you need to!). Was your prediction on the previous page correct?
+ 
+Return the answer in the a JSON format:
+{'Question_number': {'Question': 'Original text of the question', 'Reasons': 'This question is asking for..., which reflects...', 'Answer': 'Yes/No'}}
