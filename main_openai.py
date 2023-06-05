@@ -6,24 +6,13 @@ import json
 
 import os
 os.environ["OPENAI_API_TYPE"] = "azure"
-
-import openai
-
-response = openai.Completion.create(
-    engine="text-davinci-003",
-    prompt="This is a test",
-    max_tokens=5
-)
-
-os.environ["OPENAI_API_TYPE"] = "azure"
 os.environ["OPENAI_API_VERSION"] = "2023-05-15"
-os.environ["OPENAI_API_BASE"] = "gpt-35-turbo"
+os.environ["OPENAI_API_BASE"] = "https://chatlogo.openai.azure.com"
 os.environ["OPENAI_API_KEY"] = 'key'
 
 from langchain.llms import AzureOpenAI
 llm = AzureOpenAI(
-    deployment_name="chatlogo",
-    model_name="text-davinci-003", 
+    deployment_name="davinci-003"
 )
 
 llm("Tell me a joke")

@@ -16,7 +16,7 @@ def get_codebookinfo(dic,index):
         subpractices = "\n'"+"',\n'".join(subpractices_list)
         
         # Form up the composite prompt used to feed in GPT.
-        prompt = f"The name of the practice is '{practice_name}', which is consisted of subpractices includes {subpractices}.\n \n"
+        prompt = f"The name of the practice is '{practice_name}', which is consisted of subpractices includes {subpractices}.\n\n"
         return prompt
 
 
