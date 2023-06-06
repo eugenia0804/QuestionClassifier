@@ -1,6 +1,6 @@
-from codebook import get_codebook
+from code.utils.codebook import get_codebook
 from codebookinfo import get_codebookinfo
-from question import get_questions
+from code.utils.question import get_questions
 from questioninfo import questions_prompt
 import json
 

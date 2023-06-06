@@ -5,7 +5,7 @@
     `questions_prompt(num_question)`: This function creates a prompt string for a given number of questions by calling the `get_questions()` function to retrieve the dataset, looping through the first `num_question` questions in the dataset, and adding each question's text and a description of the expected output format to the prompt string.
 
 """
-from question import get_questions
+from code.utils.question import get_questions
 import pandas as pd
 import json
 
@@ -34,7 +34,6 @@ def questions_prompt(start_q,end_q):
         added_prompt = f"\n{i+1}: {question_text}"
         prompt = prompt + added_prompt
          # Create a string that describes the format of the expected output
-    #output_example = f"\n \nReturn the answer in the a JSON format:\n{json.dumps(template)}"
     output_example = f"\n \nReturn the answer in the a JSON format:\n{template}"
      # Add the output example string to the overall prompt string
     prompt = prompt + output_example
