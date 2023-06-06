@@ -34,7 +34,7 @@ def questions_prompt(start_q,end_q):
         added_prompt = f"\n{i+1}: {question_text}"
         prompt = prompt + added_prompt
          # Create a string that describes the format of the expected output
-    output_example = f"\n \nReturn the answer in the a JSON format:\n{template}"
+    output_example = f"\n \nReturn the answer in the a JSON format:\n{template}, remember to add double quotes beside all keys."
      # Add the output example string to the overall prompt string
     prompt = prompt + output_example
     return prompt

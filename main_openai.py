@@ -2,6 +2,7 @@ from code.utils.codebook import get_codebook
 from codebookinfo import get_codebookinfo
 from code.utils.question import get_questions
 from questioninfo import questions_prompt
+from questionanswer import get_answers
 import json
 
 import os
@@ -16,19 +17,6 @@ llm = AzureOpenAI(
     max_tokens=3000
 )
 
-
-
-'''
-model = GooglePalm(
-    client = 
-    google_api_key=os.environ['PALM'],
-    temperature=0.2,
-    top_k=None,
-    top_p=None,
-    max_output_tokens=None,
-    n=1
-)
-'''
 
 codebook = get_codebook() # get the codebook dictionary
 questions = get_questions()  # get the questions dictionary
@@ -47,24 +35,27 @@ def classify_questions(practice_index,start_q,end_q):
     result = llm(prompt)  
     return prompt , result
 
-
 def store_result(index,start_q,end_q): 
   [prompt, results] = classify_questions(index,start_q,end_q)
-  with open('Results/iteration#2/prompt_20to30.txt', 'w') as file:
+  with open('Results/iteration#2/prompt_1to3.txt', 'w') as file:
     file.write(prompt)
-  with open('Results/iteration#2/raw_results_20to30.json', 'w') as file:
+  with open('Results/iteration#2/raw_results_1to3.txt', 'w') as file:
     json.dump(results, file)
     
   final_result = {}
   # Populate the DataFrame with data from the results list
-  for i, result in enumerate(results):
+  str_res = results.strip().replace("\n", "").replace("Answer:", "").replace("'",'"')
+  json_res = json.loads(str_res)
+  correct_answers = get_answers(index, start_q, end_q)
+  for i, (key, value) in enumerate(json_res.items()):
+    correct_answer = "No"
+    if correct_answers[i] == 1:
+        correct_answer = "Yes"
+    value["Correct Answer"] = correct_answer
+    final_result[key] = value
     
-      '''
-      Insert correct answer into the output dictionary and stored it in final_result
-      '''
-      
-  with open('Results/iteration#2/results_20to30.json', 'w') as file:
+  with open('Results/iteration#2/results_1to3.json', 'w') as file:
     json.dump(final_result, file)
   
-store_result(index = 2, start_q = 20,end_q = 23)
-print(formulate_prompt(2, start_q = 20, end_q = 30))
+store_result(index = 2, start_q = 1,end_q = 3)
+#print(formulate_prompt(2, start_q = 1, end_q = 3))

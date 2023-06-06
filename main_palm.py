@@ -42,9 +42,9 @@ def classify_questions(practice_index,start_q,end_q):
 
 def store_result(index,start_q,end_q): 
   [prompt, results] = classify_questions(index,start_q,end_q)
-  with open('Results/iteration#2/prompt_20to30.txt', 'w') as file:
+  with open('Results/iteration#2/prompt_palm_1to3.txt', 'w') as file:
     file.write(prompt)
-  with open('Results/iteration#2/raw_results_20to30.json', 'w') as file:
+  with open('Results/iteration#2/raw_results_palm_1to3.json', 'w') as file:
     json.dump(results, file)
     
   final_result = {}
@@ -55,7 +55,7 @@ def store_result(index,start_q,end_q):
       Insert correct answer into the output dictionary and stored it in final_result
       '''
       
-  with open('Results/iteration#2/results_20to30.json', 'w') as file:
+  with open('Results/iteration#2/results_palm_1to3.json', 'w') as file:
     json.dump(final_result, file)
   
 #store_result(index = 2, start_q = 20,end_q = 30)
