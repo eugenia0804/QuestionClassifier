@@ -12,8 +12,7 @@ model = GooglePalm(google_api_key=os.environ['GOOGLE_API_KEY'])
 
 '''
 model = GooglePalm(
-    client = 
-    google_api_key=os.environ['PALM'],
+    google_api_key=os.environ['GOOGLE_API_KEY'],
     temperature=0.2,
     top_k=None,
     top_p=None,
@@ -21,6 +20,7 @@ model = GooglePalm(
     n=1
 )
 '''
+
 
 codebook = get_codebook() # get the codebook dictionary
 questions = get_questions()  # get the questions dictionary
