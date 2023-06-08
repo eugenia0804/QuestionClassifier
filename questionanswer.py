@@ -1,4 +1,4 @@
-from code.utils.question import get_questions
+from code.utils import get_questions
 
 def get_answers(index, start_q, end_q):
     df = get_questions()
