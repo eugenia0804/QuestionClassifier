@@ -26,7 +26,7 @@ Feed the composite prompt into GPT and get the answers.
     packages: os, pandas, csv, openai
     
 - **iteration#2:** \
-    model used: PaLM-2(text-bison-001)\
+    model used: GPT3.5(text-davinci-003) & PaLM-2(text-bison-001)\
     prompt composition: practice, subpractice, question, instruction\
     results: result.json (composite result), raw_result.json (raw result), prompt.txt\
     packages: os, pandas, json, langchain.llms
