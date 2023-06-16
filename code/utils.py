@@ -1,14 +1,7 @@
-"""
-    Returns:
-         json: Codebook which stores the information about the name of the practice, subpractices, and examples
-    
-    This file contains a dictionary of coding practices and their subpractices and example questions.
-    To use this codebook, import this file and call the `get_codebook()` function.
-
-"""
-
 import pandas as pd
 import numpy as np
+#from questioninfo import questions_prompt
+#from codebookinfo import get_codebookinfo
 
 def get_codebook():
     #Load the codebook data file from a URL
@@ -46,13 +39,6 @@ def get_codebook():
     
     return codebook
 
-'''
-    Return: Clean df containing question related information
-    
-    `get_questions()`: This function retrieves the dataset of questions from a given URL and cleans it up by removing any rows with NaN values and reindexing the rows.  
-'''
-
-import pandas as pd
 
 # Define a function that retrieves a dataset of questions from a URL
 def get_questions():
@@ -65,4 +51,10 @@ def get_questions():
     df_q.columns = df_q.columns.str.replace('\n', ' ')
     return df_q
 
-get_questions()
+'''
+def formulate_prompt(practice_index,start_q,end_q):
+    codeinfo = get_codebookinfo(get_codebook(),practice_index) 
+    questioninfo = questions_prompt(start_q,end_q)
+    prompt = codeinfo + questioninfo
+    return prompt
+'''
