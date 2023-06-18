@@ -3,9 +3,9 @@ The name of the practice is 'Algorithm Practices', which is consisted of subprac
 'Selecting an appropriate algorithm to solve a problem',
 'Assessing the efficiency, correctness, and clarity of an algorithm',
 'Modifying an algorithm to better address a problem',
-'Designing and constructing algorithms.
+'Designing and constructing algorithms'.
 
-Determine whether the following 10 questions reflect the given practice or not (Do not try to answer the questions):
+Determine whether the following 9 questions reflect the given practice or not (Do not try to answer the questions):
 
 1: What is the parameter of interest? What symbol is used to represent this value?
 2: What is the statistic obtained from the sample? What symbol is used to represent this value?
@@ -16,8 +16,11 @@ Determine whether the following 10 questions reflect the given practice or not (
 7: Calculate the sample mean for all possible samples of size 2 from this population. 
 8: Create a dotplot of your results from question #2. Create your sketch below.
 9: In most real-life situations, we cannot create the dotplot of all possible samples of size n from the entire population (size N). Why not?
-10: Click "setup" and then "collect sample". What did the model do?
-11: Press the "collect sample" button 30 times. Drag the word "Mean" from the table to the horizontal axis of the empty graph. The graph is starting to take shape, but it cannot be called a sampling distribution yet... Why not?
+10: Click `setup` and then `collect sample`. What did the model do?
+                        
  
 Return the answer in the a JSON format:
-{'Question_number': {'Question': 'Original text of the question', 'Reasons': 'This question is asking for..., which reflects...', 'Answer': 'Yes/No'}}, remember to add double quotes beside all keys.
+{"Question_number(eg. '1')": {'Question': 'Original text of the question', 'Reasons': 'This question is asking for..., which reflects...', 'Answer': 'Yes/No'}},
+                        remember to strickly follow notation rules of json structures
+                        (eg. required comma & double quotation mark around property names & use single quotation inside of sentences)"
+                        

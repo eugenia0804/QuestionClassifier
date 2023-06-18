@@ -10,7 +10,7 @@ import pandas as pd
 
 
 template = {
-    "Question_number": {
+    "Question_number(eg. '1')": {
         "Question": "Original text of the question",
         "Reasons": "This question is asking for..., which reflects...",
         "Answer": "Yes/No"
@@ -27,14 +27,18 @@ def questions_prompt(start_q,end_q):
     questions = []
     # Loop through each question in the dataset
     for i in range (start_q-1,end_q):
-        question_text = df_q['Question'][i]
+        question_text = df_q['Question'][i].replace('"','`')
         questions.append(question_text)
         question_num.append(i+1)
          # Create a string that includes the index number and text of the current question
         added_prompt = f"\n{i+1}: {question_text}"
         prompt = prompt + added_prompt
          # Create a string that describes the format of the expected output
-    output_example = f"\n \nReturn the answer in the a JSON format:\n{template}, remember to add double quotes beside all keys."
+    output_example = f'''
+                        \n \nReturn the answer in the a JSON format:\n{template},
+                        remember to strickly follow notation rules of json structures
+                        (eg. required comma & double quotation mark around property names & use single quotation inside of sentences)"
+                        '''
      # Add the output example string to the overall prompt string
     prompt = prompt + output_example
     return prompt

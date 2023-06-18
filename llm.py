@@ -8,7 +8,8 @@ def get_llm():
     from langchain.llms import AzureOpenAI
     llm = AzureOpenAI(
         deployment_name="davinci-003",
-        max_tokens=2000
+        max_tokens=2000,
+        temperature=0
     )
     return llm
 

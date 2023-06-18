@@ -49,7 +49,10 @@ def get_questions():
     # Reindex the lines of the dataset
     df_q = df_q.reset_index(drop=True)
     df_q.columns = df_q.columns.str.replace('\n', ' ')
+    df_q.columns = df_q.columns.str.replace('"','`')
+    df_q.columns = df_q.columns.str.replace("'","`")
     return df_q
+
 
 '''
 def formulate_prompt(practice_index,start_q,end_q):
