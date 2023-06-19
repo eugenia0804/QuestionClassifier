@@ -14,12 +14,12 @@ def classify_questions(practice_index,start_q,end_q):
     result = llm(prompt)  
     return prompt , result
 
-def store_result(index,start_q,end_q): 
+def store_result(index,start_q,end_q,iteration): 
   [prompt, results] = classify_questions(index,start_q,end_q)
-  filename = 'results/iteration-2/prompts/'+str(start_q)+'to'+str(end_q)+'.txt'
+  filename = 'results/iteration-'+str(iteration)+'/prompts/'+str(start_q)+'to'+str(end_q)+'.txt'
   with open(filename, 'w') as file:
     file.write(prompt)
-  filename = 'results/iteration-2/raw_results/'+str(start_q)+'to'+str(end_q)+'.txt'
+  filename = 'results/iteration-'+str(iteration)+'/raw_results/'+str(start_q)+'to'+str(end_q)+'.txt'
   with open(filename, 'w') as file:
     json.dump(results, file)
     
@@ -40,21 +40,21 @@ def store_result(index,start_q,end_q):
     value["Correct Answer"] = correct_answer
     final_result[key] = value
   
-  with open('results/iteration-2/results/'+str(start_q)+'to'+str(end_q)+'.json', 'w') as file:
+  with open('results/iteration-'+str(iteration)+'/results/'+str(start_q)+'to'+str(end_q)+'.json', 'w') as file:
     json.dump(final_result, file)
   return final_result
     
 #store_result(index = 2, start_q = 1,end_q = 3)
 
-def run_all(index):
+def run_all(index, iteration):
   question_df = get_questions()
   num_questions = question_df.shape[0]
   result_dict = {}
   for i in range(1, num_questions-80, 10):
-    result_dict.update(store_result(index, i, i+9))
+    result_dict.update(store_result(index, i, i+9, iteration))
   keys = result_dict.keys()
-  with open('Results/iteration-2/final/1to'+str(num_questions-80)+'.json', 'w') as file:
+  with open('results/iteration-'+str(iteration)+'/final/1to'+str(num_questions-80)+'.json', 'w') as file:
     json.dump(result_dict, file)
   return 
 
-run_all(2)
+run_all(index = 2, iteration = 2)
