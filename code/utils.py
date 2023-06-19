@@ -53,6 +53,12 @@ def get_questions():
     df_q.columns = df_q.columns.str.replace("'","`")
     return df_q
 
+# define the function to get the human-labeled result in the data file
+def get_answers(index, start_q, end_q):
+    df = get_questions()
+    listofkeys = list(df.keys())[3:]
+    answer = df[listofkeys[index]][start_q-1:end_q]
+    return list(answer)
 
 '''
 def formulate_prompt(practice_index,start_q,end_q):
