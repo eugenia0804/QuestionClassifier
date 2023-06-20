@@ -1,16 +1,17 @@
 from code.utils import get_codebook, get_questions, get_answers
-from codebook_info import get_codebookinfo
+from prompts import formulate_prompt
 from question_info import questions_prompt
 from llm import get_llm
 import json
+import pandas as pd
+import re
 
 iteration = 2
-def classify_questions(practice_index,start_q,end_q):
-    codeinfo = get_codebookinfo(get_codebook(),practice_index) 
-    questioninfo = questions_prompt(start_q,end_q)
-    prompt = codeinfo + questioninfo
+def classify_questions(index,start_q,end_q):
+    prompt = formulate_prompt(index,start_q,end_q)
     llm = get_llm()
     result = llm(prompt)  
+    print('llm completed')
     return prompt , result
 
 def store_result(index,start_q,end_q,iteration): 
@@ -26,9 +27,11 @@ def store_result(index,start_q,end_q,iteration):
   input_str = results.strip().replace("'", '"')
   '''
   raw_string = re.sub(r'"(.*?)"', r"'\1'", results)
-  string = re.sub(r"'(.*?)':", r'"\1":', raw_string)
-  input_str = re.sub(r"'(.*?)',", r'"\1",', string)
+  string = re.sub(r"'(.*?)':", r'"\1":', results)
+  i_str = re.sub(r"'(.*?)',", r'"\1",', string)
+  input_str = re.sub(r"'(.*?)'}}", r'"\1"}}', i_str)
   '''
+
   print(input_str)
   json_res = json.loads(input_str)
   correct_answers = get_answers(index, start_q, end_q)
@@ -50,10 +53,11 @@ def run_all(index, iteration):
   num_questions = question_df.shape[0]
   result_dict = {}
   for i in range(1, num_questions-80, 10):
-    result_dict.update(store_result(index, i, i+9, iteration))
+    result_dict.update(store_result(index, i, i+2, iteration))
   keys = result_dict.keys()
   with open('results/iteration-'+str(iteration)+'/final/1to'+str(num_questions-80)+'.json', 'w') as file:
     json.dump(result_dict, file)
   return 
 
+print('work-stream began')
 run_all(index = 2, iteration = 2)

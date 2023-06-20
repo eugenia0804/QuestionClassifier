@@ -7,9 +7,9 @@ os.environ["OPENAI_API_KEY"] = os.environ['OPENAI_API_KEY']
 def get_llm():
     from langchain.llms import AzureOpenAI
     llm = AzureOpenAI(
-        deployment_name="davinci-003",
+        deployment_name="turbo-16k",
         max_tokens=2000,
-        temperature=0
+        temperature=0.2
     )
     return llm
 

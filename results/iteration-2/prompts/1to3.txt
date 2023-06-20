@@ -1,15 +1,19 @@
-The name of the practice is 'Algorithm Practices', which is consisted of subpractices includes 
-'Using an algorithm to solve a problem',
-'Selecting an appropriate algorithm to solve a problem',
-'Assessing the efficiency, correctness, and clarity of an algorithm',
-'Modifying an algorithm to better address a problem',
-'Designing and constructing algorithms.
+The name of the practice is `Algorithm Practices`, which is consisted of subpractices includes 
+`Using an algorithm to solve a problem',
+`Selecting an appropriate algorithm to solve a problem',
+`Assessing the efficiency, correctness, and clarity of an algorithm',
+`Modifying an algorithm to better address a problem',
+`Designing and constructing algorithms.
 
 Determine whether the following 2 questions reflect the given practice or not (Do not try to answer the questions):
 
 1: What is the parameter of interest? What symbol is used to represent this value?
 2: What is the statistic obtained from the sample? What symbol is used to represent this value?
 3: How many samples of size 2 can be taken from this population?
+                        
  
 Return the answer in the a JSON format:
-{'Question_number(eg. 1)': {'Question': 'Original text of the question', 'Reasons': 'This question is asking for..., which reflects...', 'Answer': 'Yes/No'}}, remember to strickly follow the rules and avoid any missing comma.
+{"Question_number(eg. '1')": {'Question': 'Original text of the question', 'Reasons': 'This question is asking for..., which reflects...', 'Answer': 'Yes/No'}},
+                        remember to strickly follow notation rules of json structures
+                        (eg. required comma & double quotation mark around property names & use single quotation inside of sentences)"
+                        
