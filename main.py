@@ -8,11 +8,11 @@ import re
 
 iteration = 2
 def classify_questions(index,start_q,end_q):
-    prompt = formulate_prompt(index,start_q,end_q)
+    sys_prompt, prompt = formulate_prompt(index,start_q,end_q)
     llm = get_llm()
-    result = llm(prompt)  
+    result = llm(sys_prompt + prompt)  
     print('llm completed')
-    return prompt , result
+    return sys_prompt + prompt , result
 
 def store_result(index,start_q,end_q,iteration): 
   [prompt, results] = classify_questions(index,start_q,end_q)
