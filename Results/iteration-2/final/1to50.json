@@ -1,0 +1,206 @@
+{
+    "1": {
+        "Question": "What is the parameter of interest? What symbol is used to represent this value?",
+        "Reasons": "The question is intended for students to perform the work of selecting an appropriate algorithm to solve a problem, which reflects the `Algorithm Practices`.",
+        "Answer": "Yes",
+        "Correct Answer": "No"
+    },
+    "2": {
+        "Question": "What is the statistic obtained from the sample? What symbol is used to represent this value?",
+        "Reasons": "The focus of the questions is the step to assess the efficiency, correctness, and clarity of an algorithm, which reflects the `Algorithm Practices`.",
+        "Answer": "Yes",
+        "Correct Answer": "No"
+    },
+    "3": {
+        "Question": "How many samples of size 2 can be taken from this population?",
+        "Reasons": "The focus of the questions is the step to select an appropriate algorithm to solve a problem, which reflects the `Algorithm Practices`.",
+        "Answer": "Yes",
+        "Correct Answer": "No"
+    },
+    "4": {
+        "Question": "What is the parameter of interest for this situation?",
+        "Reasons": "The focus of the questions is the step to select an appropriate algorithm to solve a problem, which reflects the `Algorithm Practices`.",
+        "Answer": "Yes",
+        "Correct Answer": "No"
+    },
+    "5": {
+        "Question": "What statistic are we using to estimate the parameter of interest for this situation?",
+        "Reasons": "The focus of the questions is the step to assess the efficiency, correctness, and clarity of an algorithm, which reflects the `Algorithm Practices`.",
+        "Answer": "Yes",
+        "Correct Answer": "No"
+    },
+    "6": {
+        "Question": "Do you think taking a sample this size from this population effectively estimates the mean score of the population?",
+        "Reasons": "The focus of the questions is the step to assess the efficiency, correctness, and clarity of an algorithm, which reflects the `Algorithm Practices`.",
+        "Answer": "Yes",
+        "Correct Answer": "No"
+    },
+    "7": {
+        "Question": "Calculate the sample mean for all possible samples of size 2 from this population.",
+        "Reasons": "The focus of the questions is the step to modify an algorithm to better address a problem, which reflects the `Algorithm Practices`.",
+        "Answer": "Yes",
+        "Correct Answer": "Yes"
+    },
+    "8": {
+        "Question": "Create a dotplot of your results from question #2. Create your sketch below.",
+        "Reasons": "The focus of the questions is the step to assess the efficiency, correctness, and clarity of an algorithm, which reflects the `Algorithm Practices`.",
+        "Answer": "Yes",
+        "Correct Answer": "Yes"
+    },
+    "9": {
+        "Question": "In most real-life situations, we cannot create the dotplot of all possible samples of size n from the entire population (size N). Why not?",
+        "Reasons": "The focus of the questions is the step to assess the efficiency, correctness, and clarity of an algorithm, which reflects the `Algorithm Practices`.",
+        "Answer": "Yes",
+        "Correct Answer": "No"
+    },
+    "10": {
+        "Question": "Click `setup` and then `collect sample`. What did the model do?",
+        "Reasons": "The focus of the questions is the step to select an appropriate algorithm to solve a problem, which reflects the `Algorithm Practices`.",
+        "Answer": "Yes",
+        "Correct Answer": "No"
+    },
+    "11": {
+        "Question": "Press the `collect sample` button 30 times. Drag the word `Mean` from the table to the horizontal axis of the empty graph. The graph is starting to take shape, but it cannot be called a sampling distribution yet... Why not?",
+        "Reasons": "The question is intended for students to perform the work of assessing the efficiency, correctness, and clarity of an algorithm, which reflect the `Algorithm Practices`.",
+        "Answer": "Yes",
+        "Correct Answer": "Yes"
+    },
+    "12": {
+        "Question": "A school administrator took a sample of 2 AP statistics students and found their average AP test score to be 1.5. Based on that sample, the Administrator is claiming that the mean test score for all AP stats students at ETHS is 1.5. Do you have substantial evidence to refute their claim? You just created a statistical model - use it to explain to the administrator that their estimate is probably wrong.",
+        "Reasons": "The focus of the questions is the step to refute the administrator's claim, which does not reflect any of the listed subpractices.",
+        "Answer": "No",
+        "Correct Answer": "Yes"
+    },
+    "21": {
+        "Question": "On the next page you'll be asked to use the model to see how sample size affects the variability of the sampling distribution. Make a plan for how you'll use the model to investigate this question.",
+        "Reasons": "The question is intended for students to perform the work of `Selecting an appropriate algorithm to solve a problem`, which reflects the `Algorithm Practices`.",
+        "Answer": "Yes",
+        "Correct Answer": "No"
+    },
+    "22": {
+        "Question": "Use your plan and investigate how changing the sample size affects the variability of the sampling distribution (you can show the standard deviation on your graphs in the same way that we showed the mean, go back to page 1 if you need to!). Was your prediction on the previous page correct?",
+        "Reasons": "The focus of the questions is the step to `Assessing the efficiency, correctness, and clarity of an algorithm`, which reflects the `Algorithm Practices`.",
+        "Answer": "Yes",
+        "Correct Answer": "Yes"
+    },
+    "31": {
+        "Question": "Someone looks at this data and concludes that EPD is biased against white people. Do you agree? How would you use this data to support or refute their claim?",
+        "Reasons": "The focus of the questions is to analyze data and draw conclusions, which does not reflect any of the listed subpractices.",
+        "Answer": "No",
+        "Correct Answer": "Yes"
+    },
+    "32": {
+        "Question": "What other information do you think is needed in order to investigate the idea that EPD is disproportionately stopping one race of driver?",
+        "Reasons": "The focus of the questions is to analyze data and draw conclusions, which does not reflect any of the listed subpractices.",
+        "Answer": "No",
+        "Correct Answer": "No"
+    },
+    "33": {
+        "Question": "Calculate the proportion of traffic stops in which the driver was black.",
+        "Reasons": "The question is intended for students to perform the work of `Using an algorithm to solve a problem`, which reflect the `Algorithm Practices`.",
+        "Answer": "Yes",
+        "Correct Answer": "Yes"
+    },
+    "34": {
+        "Question": "Set the population proportion slider to match your answer in the previous question. When you click `setup` button and then the \u201ctake sample\u201d button the model will take an SRS of 5 traffic stops and report the proportion of drivers who identify as black. Take a few samples. Do you get proportions close to the actual value? Explain why you do or do not.",
+        "Reasons": "The question is intended for students to perform the work of `Selecting an appropriate algorithm to solve a problem`, `Assessing the efficiency, correctness, and clarity of an algorithm`, which reflect the `Algorithm Practices`.",
+        "Answer": "Yes",
+        "Correct Answer": "Yes"
+    },
+    "35": {
+        "Question": "On the next page you're going to do some work with sampling distributions. Define the term `sampling distribution` in one sentence.",
+        "Reasons": "The focus of the questions is to define a term, which does not reflect any of the listed subpractices.",
+        "Answer": "No",
+        "Correct Answer": "No"
+    },
+    "36": {
+        "Question": "Before we get too deep into this, let's acknowledge that this is a very complicated issue. The how and why of traffic stops is complicated. Understandint that there are no right answers, what are some possible problems that exist with this data before we do anything to it?",
+        "Reasons": "The focus of the questions is to analyze data and draw conclusions, which does not reflect any of the listed subpractices.",
+        "Answer": "No",
+        "Correct Answer": "Yes"
+    },
+    "37": {
+        "Question": "Set the model with parameters p = 0.15 and n = 5. Create an approximate sampling distribution. Describe the sampling distribution in context (Remember your SOCS!).",
+        "Reasons": "The question is intended for students to perform the work of `Using an algorithm to solve a problem`, which reflect the `Algorithm Practices`.",
+        "Answer": "Yes",
+        "Correct Answer": "Yes"
+    },
+    "38": {
+        "Question": "Don't use the model yet. Make a prediction. What will happen to the sampling distribution if you make the true proportion higher?",
+        "Reasons": "The focus of the questions is to analyze data and draw conclusions, which does not reflect any of the listed subpractices.",
+        "Answer": "No",
+        "Correct Answer": "No"
+    },
+    "39": {
+        "Question": "OK, now use the model, change the proportion to something higher (like 0.8). How does the sampling distribution compare?",
+        "Reasons": "The question is intended for students to perform the work of `Using an algorithm to solve a problem`, which reflect the `Algorithm Practices`.",
+        "Answer": "Yes",
+        "Correct Answer": "Yes"
+    },
+    "40": {
+        "Question": "Before using the model, make another prediction. What do you think will happen to the sampling distribution if we keep the proportion the same but increase the sample size from 5 to something higher (like 30)?",
+        "Reasons": "The focus of the questions is to analyze data and draw conclusions, which does not reflect any of the listed subpractices.",
+        "Answer": "No",
+        "Correct Answer": "No"
+    },
+    "41": {
+        "Question": "Test your hypothesis by changing the sample size. How does the sampling distribution change?",
+        "Reasons": "The question is intended for students to perform the work of assessing the efficiency, correctness, and clarity of an algorithm, which reflect the `Algorithm Practices`.",
+        "Answer": "Yes",
+        "Correct Answer": "Yes"
+    },
+    "42": {
+        "Question": "Which values for n and p will make the sampling distribution look the most normal? Perform some experiments using the model and report your findings here.",
+        "Reasons": "The focus of the questions is the step to selecting an appropriate algorithm to solve a problem, which reflects the `Algorithm Practices`.",
+        "Answer": "Yes",
+        "Correct Answer": "Yes"
+    },
+    "43": {
+        "Question": "The Evanstonian is concerned about the effect of vaping and e-cigarettes at ETHS. The Evanstonian staff poll a simple random sample of 150 ETHS students and ask, \u201cYes or No? Do you think that vaping (and/or e-cigarettes) are a problem at ETHS?\u201d Is the 10% condition satisfied? Why or why not? If so, calculate the standard deviation of the sampling distribution of p^. Suppose it's known that 30% of students will say `yes` to this question.",
+        "Reasons": "The focus of the questions is the step to assessing the efficiency, correctness, and clarity of an algorithm, which reflects the `Algorithm Practices`.",
+        "Answer": "Yes",
+        "Correct Answer": "No"
+    },
+    "44": {
+        "Question": "Suppose that 30% of all ETHS students respond \u201cYes\u201d to this question. Let p^ be the sample proportion of ETHS students who respond \u201cYes\u201d to this question. What is the mean of the sampling distribution of p^?",
+        "Reasons": "The focus of the questions is the step to assessing the efficiency, correctness, and clarity of an algorithm, which reflects the `Algorithm Practices`.",
+        "Answer": "Yes",
+        "Correct Answer": "No"
+    },
+    "45": {
+        "Question": "What is the shape of the sampling distribution of p^? Explain your reasoning and show work.",
+        "Reasons": "The focus of the questions is the step to assessing the efficiency, correctness, and clarity of an algorithm, which reflects the `Algorithm Practices`.",
+        "Answer": "Yes",
+        "Correct Answer": "No"
+    },
+    "46": {
+        "Question": "What is the probability that, in a random sample of 150 ETHS students, less than 25% will respond `Yes`. (Note: You've shown that this data can be approximated as normal, and you have calculated the mean and standard deviation of that distribution. This is now the sort of problem that you did waaaay back in chapter 2!)",
+        "Reasons": "The focus of the questions is the step to assessing the efficiency, correctness, and clarity of an algorithm, which reflects the `Algorithm Practices`.",
+        "Answer": "Yes",
+        "Correct Answer": "No"
+    },
+    "47": {
+        "Question": "In a congressional district, 55% of registered voters are Democrats. Suppose we take a random sample of 100 voters from this congressional district. What is the probability of getting less than 50% Democrats in a random sample of size 100?",
+        "Reasons": "The focus of the questions is the step to assessing the efficiency, correctness, and clarity of an algorithm, which reflects the `Algorithm Practices`.",
+        "Answer": "Yes",
+        "Correct Answer": "No"
+    },
+    "48": {
+        "Question": "The Chicago Tribune asked a random sample of 750 Chicago residents. `Do you wear a face covering in public?` Based on a previous study by the IDPH, we know that 50% of ALL Chicago residents actually wear a face covering in public. Let p^ be the sample proportion who say that they wear a face covering in public. What is the probability that, in a random sample of 750, more than 75% will respond `Yes (I wear a face covering in public)`?",
+        "Reasons": "The focus of the questions is the step to assessing the efficiency, correctness, and clarity of an algorithm, which reflects the `Algorithm Practices`.",
+        "Answer": "Yes",
+        "Correct Answer": "No"
+    },
+    "49": {
+        "Question": "If the claim is true what could that suggest about racial bias in EPD?",
+        "Reasons": "The focus of the questions is not related to any of the listed subpractices, which does not reflect the `Algorithm Practices`.",
+        "Answer": "No",
+        "Correct Answer": "No"
+    },
+    "50": {
+        "Question": "The idea that Police aren't always fair in carrying out their duties can bring up a lot of feelings and experiences. Do you have any personal thoughts or experiences about this topic that you'd like to share?",
+        "Reasons": "The focus of the questions is not related to any of the listed subpractices, which does not reflect the `Algorithm Practices`.",
+        "Answer": "No",
+        "Correct Answer": "No"
+    }
+}

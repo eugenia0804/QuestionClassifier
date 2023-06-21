@@ -8,11 +8,12 @@ def get_questioninfo(start_q,end_q):
     question_num = []
     # Loop through each question in the dataset
     questions_txt = ''
-    for i in range (start_q-1,end_q):
-        question_text = df_q['Question'][i].replace('"','`')
-        question_num.append(i+1)
-         # Create a string that includes the index number and text of the current question
-        added_qtxt = f"\n{i+1}: {question_text}"
+    for i in range(start_q - 1, end_q):
+        question_text = df_q['Question'][i].replace('"', '`')
+        if len(question_text) > 400:
+            question_text = question_text[:400] + '...'  # Truncate the question
+        question_num.append(i + 1)
+        # Create a string that includes the index number and text of the current question
+        added_qtxt = f"\n{i + 1}: {question_text}"
         questions_txt = questions_txt + added_qtxt
     return questions_txt
-
