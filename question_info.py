@@ -1,5 +1,4 @@
-from code.utils import get_questions
-
+from Code.utils import get_questions
 
 # Define a function that creates a prompt string for a given number of questions
 def get_questioninfo(start_q,end_q):

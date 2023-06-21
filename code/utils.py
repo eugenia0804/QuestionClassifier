@@ -1,5 +1,6 @@
 import pandas as pd
 import numpy as np
+import json
 #from questioninfo import questions_prompt
 #from codebookinfo import get_codebookinfo
 
@@ -67,3 +68,5 @@ def formulate_prompt(practice_index,start_q,end_q):
     prompt = codeinfo + questioninfo
     return prompt
 '''
+
+print(json.dumps(get_codebook(),indent = 1))

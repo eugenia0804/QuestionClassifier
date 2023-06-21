@@ -1,4 +1,4 @@
-from code.utils import get_questions, get_answers
+from Code.utils import get_questions, get_answers
 from prompts import formulate_prompt
 from llm import get_llm
 import json
