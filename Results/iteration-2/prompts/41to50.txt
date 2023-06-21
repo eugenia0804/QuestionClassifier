@@ -1,0 +1,59 @@
+
+        Inmagine yourself as a education worker, you are developing a series of after-class exercise for high school students.
+        You have determined a several practice you want to achieve by designing those question.
+        I want you to determine whether the following questions reflect that specific practice or not.
+
+        
+        The name of the practice you need to pay attention to is `Algorithm Practices`,
+        which is consisted of subpractices includes 
+`Using an algorithm to solve a problem`,
+`Selecting an appropriate algorithm to solve a problem`,
+`Assessing the efficiency, correctness, and clarity of an algorithm`,
+`Modifying an algorithm to better address a problem`,
+`Designing and constructing algorithms.
+        The practice is defined as A question that prompts students to engage in one or more of the subpractices. Modifying or designing an algorithm might involve pseudo-code only but can also include implementing it in a computational language (e.g. text or block based code)..
+        Below is one example input and output  (NO NEED TO FOLLOW): 
+
+        
+        Determine whether the following questions reflect the given practice or not
+        (Do not try to answer the questions):
+
+        
+        '''C
+        
+41: Test your hypothesis by changing the sample size. How does the sampling distribution change? 
+42: Which values for n and p will make the sampling distribution look the most normal? Perform some experiments using the model and report your findings here.
+43: The Evanstonian is concerned about the effect of vaping and e-cigarettes at ETHS. The Evanstonian staff poll a simple random sample of 150 ETHS students and ask,
+
+¡°Yes or No? Do you think that vaping (and/or e-cigarettes) are a problem at ETHS?¡±
+
+Is the 10% condition satisfied? Why or why not? If so, calculate the standard deviation of the sampling distribution of p^. Suppose it's known that 30% of students will say `yes` to this question.
+44: Suppose that 30% of all ETHS students respond ¡°Yes¡± to this question. Let p^ be the sample proportion of ETHS students who respond ¡°Yes¡± to this question. What is the mean of the sampling distribution of p^?
+45: What is the shape of the sampling distribution of p^? Explain your reasoning and show work.
+46: What is the probability that, in a random sample of 150 ETHS students, less than 25% will respond `Yes`. (Note: You've shown that this data can be approximated as normal, and you have calculated the mean and standard deviation of that distribution. This is now the sort of problem that you did waaaay back in chapter 2!)
+47: In a congressional district, 55% of registered voters are Democrats. Suppose we take a random sample of 100 voters from this congressional district. What is the probability of getting less than 50% Democrats in a random sample of size 100?
+48: The Chicago Tribune asked a random sample of 750 Chicago residents. `Do you wear a face covering in public?` Based on a previous study by the IDPH, we know that 50% of ALL Chicago residents actually wear a face covering in public. Let p^ be the sample proportion who say that they wear a face covering in public. What is the probability that, in a random sample of 750, more than 75% will respond `Yes (I wear a face covering in public)`?
+49: If the claim is true what could that suggest about racial bias in EPD?
+50: The idea that Police aren't always fair in carrying out their duties can bring up a lot of feelings and experiences. Do you have any personal thoughts or experiences about this topic that you'd like to share?
+        '''
+        
+        Return the answer in the a easily dumped JSON format like this 
+
+        {
+            "Question_number(eg. "1")":
+                {
+                    "Question": "Original text of question 1",
+                    "Reasons": "The question is intended for students to perform the work of ..., which reflect the `practice name`.",
+                    "Answer": "Yes/No"
+                }
+            "Question_number(eg. "2")":
+                {
+                    "QuestionNumber": "2",
+                    "Question": "Original text of question 2",
+                    "Reasons": "The focus of the questions is the step to..., which does not reflect any of the listed subpractices.",
+                    "Answer": "No"
+                }
+        }
+         £¨the sample has 2 questions in total)
+        USe `` if you want to quote some phrases.
+        

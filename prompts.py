@@ -1,6 +1,6 @@
 from Code.utils import get_codebook, get_questions
-from codebook_info import get_codebookinfo
-from question_info import get_questioninfo
+from Code.codebook_info import get_codebookinfo
+from Code.question_info import get_questioninfo
 
 def formulate_prompt(index, start_q, end_q):
     codebook = get_codebook()

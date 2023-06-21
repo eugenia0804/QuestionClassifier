@@ -23,7 +23,7 @@ def store_result(index,start_q,end_q,iteration):
     json.dump(results, file)
     
   final_result = {}
-  input_str = results.strip().replace("'", '"')
+  input_str = results.strip()#.replace("'", '"')
   '''
   raw_string = re.sub(r'"(.*?)"', r"'\1'", results)
   string = re.sub(r"'(.*?)':", r'"\1":', results)

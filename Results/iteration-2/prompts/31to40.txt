@@ -1,0 +1,55 @@
+
+        Inmagine yourself as a education worker, you are developing a series of after-class exercise for high school students.
+        You have determined a several practice you want to achieve by designing those question.
+        I want you to determine whether the following questions reflect that specific practice or not.
+
+        
+        The name of the practice you need to pay attention to is `Algorithm Practices`,
+        which is consisted of subpractices includes 
+`Using an algorithm to solve a problem`,
+`Selecting an appropriate algorithm to solve a problem`,
+`Assessing the efficiency, correctness, and clarity of an algorithm`,
+`Modifying an algorithm to better address a problem`,
+`Designing and constructing algorithms.
+        The practice is defined as A question that prompts students to engage in one or more of the subpractices. Modifying or designing an algorithm might involve pseudo-code only but can also include implementing it in a computational language (e.g. text or block based code)..
+        Below is one example input and output  (NO NEED TO FOLLOW): 
+
+        
+        Determine whether the following questions reflect the given practice or not
+        (Do not try to answer the questions):
+
+        
+        '''C
+        
+31: Someone looks at this data and concludes that EPD is biased against white people. Do you agree? How would you use this data to support or refute their claim?
+32: What other information do you think is needed in order to investigate the idea that EPD is disproportionately stopping one race of driver?
+33: Calculate the proportion of traffic stops in which the driver was black.
+34: Set the population proportion slider to match your answer in the previous question. When you click `setup` button and then the ¡°take sample¡± button the model will take an SRS of 5 traffic stops and report the proportion of drivers who identify as black. Take a few samples. Do you get proportions close to the actual value? Explain why you do or do not.
+35: On the next page you're going to do some work with sampling distributions. Define the term `sampling distribution` in one sentence. 
+36: Before we get too deep into this, let's acknowledge that this is a very complicated issue. The how and why of traffic stops is complicated. Understandint that there are no right answers, what are some possible problems that exist with this data before we do anything to it?
+37: Set the model with parameters p = 0.15 and n = 5. Create an approximate sampling distribution. Describe the sampling distribution in context (Remember your SOCS!).
+38: Don't use the model yet. Make a prediction. What will happen to the sampling distribution if you make the true proportion higher?
+39: OK, now use the model, change the proportion to something higher (like 0.8). How does the sampling distribution compare?
+40: Before using the model, make another prediction. What do you think will happen to the sampling distribution if we keep the proportion the same but increase the sample size from 5 to something higher (like 30)?
+        '''
+        
+        Return the answer in the a easily dumped JSON format like this 
+
+        {
+            "Question_number(eg. "1")":
+                {
+                    "Question": "Original text of question 1",
+                    "Reasons": "The question is intended for students to perform the work of ..., which reflect the `practice name`.",
+                    "Answer": "Yes/No"
+                }
+            "Question_number(eg. "2")":
+                {
+                    "QuestionNumber": "2",
+                    "Question": "Original text of question 2",
+                    "Reasons": "The focus of the questions is the step to..., which does not reflect any of the listed subpractices.",
+                    "Answer": "No"
+                }
+        }
+         £¨the sample has 2 questions in total)
+        USe `` if you want to quote some phrases.
+        

@@ -1,0 +1,55 @@
+
+        Inmagine yourself as a education worker, you are developing a series of after-class exercise for high school students.
+        You have determined a several practice you want to achieve by designing those question.
+        I want you to determine whether the following questions reflect that specific practice or not.
+
+        
+        The name of the practice you need to pay attention to is `Algorithm Practices`,
+        which is consisted of subpractices includes 
+`Using an algorithm to solve a problem`,
+`Selecting an appropriate algorithm to solve a problem`,
+`Assessing the efficiency, correctness, and clarity of an algorithm`,
+`Modifying an algorithm to better address a problem`,
+`Designing and constructing algorithms.
+        The practice is defined as A question that prompts students to engage in one or more of the subpractices. Modifying or designing an algorithm might involve pseudo-code only but can also include implementing it in a computational language (e.g. text or block based code)..
+        Below is one example input and output  (NO NEED TO FOLLOW): 
+
+        
+        Determine whether the following questions reflect the given practice or not
+        (Do not try to answer the questions):
+
+        
+        '''C
+        
+21: On the next page you'll be asked to use the model to see how sample size affects the variability of the sampling distribution. Make a plan for how you'll use the model to investigate this question.
+22: Use your plan and investigate how changing the sample size affects the variability of the sampling distribution (you can show the standard deviation on your graphs in the same way that we showed the mean, go back to page 1 if you need to!). Was your prediction on the previous page correct?
+23: By what factor do you need to increase the sample size in order for the standard deviation to be cut in half?
+24: By what factor do you think you need to increase sample size in order to reduce the standard deviation to 1/3 of it's value? 
+25: Based on you answers to the previous questions, can guess at least part of what the formula for the standard deviation of a sampling distribution might be?
+26: When we're taking samples in real life in order to estimate the true value of a parameter, is it better to have more or less variation?
+27: On pages 2-3 you learned about bias. On page 4 you learned about variability. Explain the difference between those 2 concepts in a way that a freshman could understand. You are welcome to use your book and the internet for more definitions and illustrations (I think your book has a really useful graphic on page 481).
+28: Ideally, we want the variation in our sampling distribution to be as _______ as possible.
+29: Two graduate students are studying the effects of a new cancer drug. Student A took a sample of size 10 from the population, while student B took a sample of size 30. Whose results are better? Why? What do we mean by 'better'?
+30: How many total traffic stops do you think that EPD made in the 6.75 months between 1/1/20 and 7/23/20? I realize you have no great way of knowing, take a guess!
+        '''
+        
+        Return the answer in the a easily dumped JSON format like this 
+
+        {
+            "Question_number(eg. "1")":
+                {
+                    "Question": "Original text of question 1",
+                    "Reasons": "The question is intended for students to perform the work of ..., which reflect the `practice name`.",
+                    "Answer": "Yes/No"
+                }
+            "Question_number(eg. "2")":
+                {
+                    "QuestionNumber": "2",
+                    "Question": "Original text of question 2",
+                    "Reasons": "The focus of the questions is the step to..., which does not reflect any of the listed subpractices.",
+                    "Answer": "No"
+                }
+        }
+         £¨the sample has 2 questions in total)
+        USe `` if you want to quote some phrases.
+        
