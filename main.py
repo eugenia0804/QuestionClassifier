@@ -1,6 +1,5 @@
-from code.utils import get_codebook, get_questions, get_answers
+from code.utils import get_questions, get_answers
 from prompts import formulate_prompt
-from question_info import questions_prompt
 from llm import get_llm
 import json
 import pandas as pd
@@ -52,8 +51,8 @@ def run_all(index, iteration):
   question_df = get_questions()
   num_questions = question_df.shape[0]
   result_dict = {}
-  for i in range(1, num_questions-80, 10):
-    result_dict.update(store_result(index, i, i+2, iteration))
+  for i in range(1, num_questions-90, 10):
+    result_dict.update(store_result(index, i, i+9, iteration))
   keys = result_dict.keys()
   with open('results/iteration-'+str(iteration)+'/final/1to'+str(num_questions-80)+'.json', 'w') as file:
     json.dump(result_dict, file)

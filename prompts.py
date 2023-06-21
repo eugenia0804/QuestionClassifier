@@ -6,7 +6,7 @@ def formulate_prompt(index, start_q, end_q):
     codebook = get_codebook()
     practice_name, subpractices = get_codebookinfo(codebook, index)
 
-    INTRO_PROMPT = f"""
+    INTRO_PROMPT = """
         Inmagine yourself as a education worker, you are developing a series of after-class exercise for high school students.
         You have determined a several practice you want to achieve by designing those question.
         I want you to determine whether the following questions reflect that specific practice or not.\n
@@ -32,7 +32,7 @@ def formulate_prompt(index, start_q, end_q):
         }
         """
         
-    QUESTION_INTRO = f"""
+    QUESTION_INTRO = """
         Determine whether the following questions reflect the given practice or not
         (Do not try to answer the questions):\n
         """
@@ -73,6 +73,8 @@ def formulate_prompt(index, start_q, end_q):
     return SYSTEM_PROMPT, PROMPT
 
 
+'''
 print('started')
-SYSTEM_PROMPT, PROMPT = formulate_prompt(2,11,13)
+SYSTEM_PROMPT, PROMPT = formulate_prompt(2,10,19)
 print(SYSTEM_PROMPT + PROMPT)
+'''

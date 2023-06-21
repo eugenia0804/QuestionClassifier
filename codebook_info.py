@@ -3,6 +3,6 @@ def get_codebookinfo(dic,index):
         practice_name = list(dic.keys())[index-1]
         # Extract the list of subpractices for the given practice name and join them in a single line
         subpractices_list = dic[practice_name]['Subpractices']
-        subpractices = "\n`"+"',\n`".join(subpractices_list)
+        subpractices = "\n`"+"`,\n`".join(subpractices_list)
         
         return practice_name, subpractices
