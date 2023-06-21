@@ -11,21 +11,30 @@
 `Assessing the efficiency, correctness, and clarity of an algorithm`,
 `Modifying an algorithm to better address a problem`,
 `Designing and constructing algorithms.
+        The practice is defined as A question that prompts students to engage in one or more of the subpractices. Modifying or designing an algorithm might involve pseudo-code only but can also include implementing it in a computational language (e.g. text or block based code)..
+        Below is the example input and output: 
 
-        It is defined as A question that prompts students to engage in one or more of the subpractices. Modifying or designing an algorithm might involve pseudo-code only but can also include implementing it in a computational language (e.g. text or block based code).
         
         User:
-        1.	Let¡¯s use that test tube model to see how DNA gets made. What patterns do you see after DNA is replicated?
+        1. Let¡¯s use that test tube model to see how DNA gets made. What patterns do you see after DNA is replicated?
         Does this question reflect the the practice of `Computational Data Practice` or not?
         
         Assistant:
-        {'QuestionNumber': '1', 'Question': 'Let¡¯s use that test tube model to see how DNA gets made. What patterns do you see after DNA is replicated?', 'Reasons': 'To answer this question, student needs to plug in data into the test tube model and formulate thoughts based on observation, which involves the subpractice of `Using computation to analyze data`.', 'Answer': 'Yes'}
+        {
+            "1":
+                {
+                    "Question": "Let¡¯s use that test tube model to see how DNA gets made. What patterns do you see after DNA is replicated?",
+                    "Reasons": "To answer this question, student needs to plug in data into the test tube model and formulate thoughts based on observation, which involves the subpractice of `Using computation to analyze data`.",
+                    "Answer": "Yes"
+                }
+        }
+
         
         Determine whether the following questions reflect the given practice or not
         (Do not try to answer the questions):
 
         
-        '''
+        '''C
         
 1: What is the parameter of interest? What symbol is used to represent this value?
 2: What is the statistic obtained from the sample? What symbol is used to represent this value?
@@ -39,15 +48,23 @@
 10: Click `setup` and then `collect sample`. What did the model do?
         '''
         
-        Return the answer in the a JSON format:
+        Return the answer in the a easily dumped JSON format like this 
 
-            {
-                "QuestionNumber": "1",
-                "Question": "Original text of question 1",
-                "Reasons": "To answer this question, student needs to ..., which reflect the `practice name`.",
-                "Answer": "Yes/No"
-            }
-        
-        remember to strickly follow notation rules of json structures
-        (eg. required comma & double quotation mark around property names & use single quotation inside of sentences)
+        {
+            "Question_number(eg. "1")":
+                {
+                    "Question": "Original text of question 1",
+                    "Reasons": "To answer this question, student needs to ..., which reflect the `practice name`.",
+                    "Answer": "Yes/No"
+                }
+            "Question_number(eg. "2")":
+                {
+                    "QuestionNumber": "2",
+                    "Question": "Original text of question 2",
+                    "Reasons": "To answer this question, student needs to ..., which reflect the `practice name`.",
+                    "Answer": "Yes/No"
+                }
+        }
+         £¨the sample has 2 questions in total)
+        remember to strickly follow the rules.
         
