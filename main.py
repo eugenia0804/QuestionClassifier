@@ -51,7 +51,7 @@ def run_all(index, iteration):
   question_df = get_questions()
   num_questions = question_df.shape[0]
   result_dict = {}
-  for i in range(1, num_questions-90, 10):
+  for i in range(1, num_questions, 10):
     result_dict.update(store_result(index, i, i+9, iteration))
   keys = result_dict.keys()
   with open('results/iteration-'+str(iteration)+'/final/1to'+str(num_questions-80)+'.json', 'w') as file:

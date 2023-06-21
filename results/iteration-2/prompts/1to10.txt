@@ -12,22 +12,7 @@
 `Modifying an algorithm to better address a problem`,
 `Designing and constructing algorithms.
         The practice is defined as A question that prompts students to engage in one or more of the subpractices. Modifying or designing an algorithm might involve pseudo-code only but can also include implementing it in a computational language (e.g. text or block based code)..
-        Below is the example input and output: 
-
-        
-        User:
-        1. Let¡¯s use that test tube model to see how DNA gets made. What patterns do you see after DNA is replicated?
-        Does this question reflect the the practice of `Computational Data Practice` or not?
-        
-        Assistant:
-        {
-            "1":
-                {
-                    "Question": "Let¡¯s use that test tube model to see how DNA gets made. What patterns do you see after DNA is replicated?",
-                    "Reasons": "To answer this question, student needs to plug in data into the test tube model and formulate thoughts based on observation, which involves the subpractice of `Using computation to analyze data`.",
-                    "Answer": "Yes"
-                }
-        }
+        Below is one example input and output  (NO NEED TO FOLLOW): 
 
         
         Determine whether the following questions reflect the given practice or not
@@ -54,17 +39,17 @@
             "Question_number(eg. "1")":
                 {
                     "Question": "Original text of question 1",
-                    "Reasons": "To answer this question, student needs to ..., which reflect the `practice name`.",
+                    "Reasons": "The question is intended for students to perform the work of ..., which reflect the `practice name`.",
                     "Answer": "Yes/No"
                 }
             "Question_number(eg. "2")":
                 {
                     "QuestionNumber": "2",
                     "Question": "Original text of question 2",
-                    "Reasons": "To answer this question, student needs to ..., which reflect the `practice name`.",
-                    "Answer": "Yes/No"
+                    "Reasons": "The focus of the questions is the step to..., which does not reflect any of the listed subpractices.",
+                    "Answer": "No"
                 }
         }
          £¨the sample has 2 questions in total)
-        remember to strickly follow the rules.
+        USe `` if you want to quote some phrases.
         

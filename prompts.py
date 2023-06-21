@@ -116,7 +116,7 @@ def formulate_prompt(index, start_q, end_q):
 
     OUTPUT_PROMPT = f"""
         Return the answer in the a easily dumped JSON format like this \n{OUTPUT_TEMPLATE} （the sample has 2 questions in total)
-        remember to strickly follow the rules.
+        USe `` if you want to quote some phrases.
         """
         
     SYSTEM_PROMPT = INTRO_PROMPT + CODEBOOK_PROMPT #+ EXAMPLES

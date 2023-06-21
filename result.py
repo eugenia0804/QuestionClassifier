@@ -1,22 +1,32 @@
+import json
+import numpy as np
+import matplotlib.pyplot as plt
 import seaborn as sns
-import matplotlib as plt
-from sklearn.metrics import confusion_matrix
+from sklearn.metrics import confusion_matrix, accuracy_score
+with open('Results/iteration-2/final/1to18.json') as file:
+    json_object = json.load(file)
 
-def agreement_cal():
-  agreed = 0
-  for key in keys:
-    answer = result_dict[key]['Answer']
-    correct_answer = result_dict[key]['Correct Answer']
-  if answer == correct_answer:
-    agreed += 1
-  agreement_rate = (agreed / len(keys)) * 100
-  print("The inner agreement rate between answers and correct answers is {}%".format(agreement_rate))
-  
-def matrix():
-  results = []
-  for (question,data) in result_dict.items():
-    results.append([data.get("Answer"),data.get("Correct Answer")])
-    results_df = pd.DataFrame(results, columns =['Predicted','Actual'])
-    conf_mat = confusion_matrix(results_df["Actual"],results_df["Predicted"] )
-    sns.heatmap(conf_mat,annot=True,fmt="d")
-    plt.savefig("confusion_matrix.png")
+answers = []
+correct_answers = []
+for question_id, question_data in json_object.items():
+    answers.append(question_data["Answer"])
+    correct_answers.append(question_data["Correct Answer"])
+
+# Calculate accuracy
+accuracy = accuracy_score(correct_answers, answers)
+print("Accuracy:", accuracy)
+
+# Calculate confusion matrix
+confusion_mat = confusion_matrix(correct_answers, answers)
+print("Confusion Matrix:")
+print(confusion_mat)
+
+# Create labels for the confusion matrix
+labels = np.unique(correct_answers)
+
+# Plot confusion matrix
+sns.heatmap(confusion_mat, annot=True, fmt='d', cmap='Blues', xticklabels=labels, yticklabels=labels)
+plt.xlabel('Predicted')
+plt.ylabel('True')
+plt.title('Confusion Matrix')
+plt.show()
