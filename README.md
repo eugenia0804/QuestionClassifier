@@ -1,22 +1,25 @@
 # CCL-LLM Question Classifier
 
-## Main Processor Structure:
-
-- **codebook.py** \
-Load raw csv file -> Structured Json file storing all the relavent information
-
-- **codebookinfo.py** \
-Create the prompt used to teach GPT about the meaning of the category
-
-- **question.py** \
-Load raw csv file -> Structured dataframe storiing all the relavent information
-
-- **questioninfo.py** \
-Create teh prompt used to feed gpt the information of the questions needed to be categorized.
-
-- **main.py** \
-Feed the composite prompt into GPT and get the answers.
-
+## Code Structure
+```plaintext
+.
+├── Dataset
+│   ├── BioUnitDataCoding                # Codebook Original Data File 
+│   └── Questionset-TaxonomyMath         # Questions Needed to be processed
+├── Results
+│   └── iteration-1
+│       ├── final.json                    # Combined final result
+│       ├── prompts.txt                   # Prompts for each call
+│       ├── raw_results.txt               # Direct LLM output for each call
+│       └── results.json                  # Structured results for each call
+├── llm.py                                # Python script file for language model
+├── main.py                               # Entry point/main file for the project
+├── prompts.py                            # Code related to generating prompts for the language model
+├── analysis.py                           # Code for analyzing project results
+├── support.py                            # Supporting functions/utilities
+├── LICENSE                               # License information for the project
+└── README.md                             # README file with project information
+```
 
 ## Iterations:
 - **iteration#1:** \
