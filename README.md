@@ -12,11 +12,11 @@
 │       ├── prompts.txt                   # Prompts for each call
 │       ├── raw_results.txt               # Direct LLM output for each call
 │       └── results.json                  # Structured results for each call
-├── llm.py                                # Python script file for language model
-├── main.py                               # Entry point/main file for the project
-├── prompts.py                            # Code related to generating prompts for the language model
-├── analysis.py                           # Code for analyzing project results
-├── support.py                            # Supporting functions/utilities
+├── llm.py                                
+├── main.py                               # Main file for each iteration
+├── prompts.py                            
+├── analysis.py                           # Code for analyzing results
+├── support.py                            
 ├── LICENSE                               # License information for the project
 └── README.md                             # README file with project information
 ```
