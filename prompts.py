@@ -95,20 +95,38 @@ def formulate_prompt(index, start_q, end_q):
         '''
         """
         
-    OUTPUT_TEMPLATE = """
+    OUTPUT_TEMPLATE1 = """
         {
-            "Question_number(eg. "1")":
+            "Question_number listed in prompt(eg. "1")":
                 {
                     "Question": "Original text of question 1",
                     "Reasons": "The question is intended for students to perform the work of ..., which reflect the `practice name`.",
                     "Answer": "Yes/No"
                 }
-            "Question_number(eg. "2")":
+            "Question_number listed in prompt(eg. "2")":
                 {
                     "QuestionNumber": "2",
                     "Question": "Original text of question 2",
                     "Reasons": "The focus of the questions is the step to..., which does not reflect any of the listed subpractices.",
                     "Answer": "No"
+                }
+        }
+        """
+
+    OUTPUT_TEMPLATE = """
+        {
+            "Question_number listed in prompt(eg. "1")":
+                {
+                    "Question": "Original text of question 1",
+                    "Reasons": "The question is intended for students to perform the work of ..., which does/does not reflect the `practice name`.",
+                    "Answer": "Yes/No"
+                }
+            ...
+             "Question_number listed in prompt(eg. "12")":
+                {
+                    "Question": "Original text of question 1",
+                    "Reasons": "The question is intended for students to perform the work of ..., which does/does not reflect the `practice name`.",
+                    "Answer": "Yes/No"
                 }
         }
         """

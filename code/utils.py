@@ -69,4 +69,4 @@ def formulate_prompt(practice_index,start_q,end_q):
     return prompt
 '''
 
-print(json.dumps(get_codebook(),indent = 1))
+#print(json.dumps(get_codebook(),indent = 1))

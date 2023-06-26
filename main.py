@@ -1,6 +1,6 @@
 from Code.utils import get_questions, get_answers
 from prompts import formulate_prompt
-from llm import get_llm
+from llm import get_llm, get_openai
 import json
 import pandas as pd
 import re
@@ -8,7 +8,7 @@ import re
 iteration = 2
 def classify_questions(index,start_q,end_q):
     sys_prompt, prompt = formulate_prompt(index,start_q,end_q)
-    llm = get_llm()
+    llm = get_openai()
     result = llm(sys_prompt + prompt)  
     print('llm completed')
     return sys_prompt + prompt , result
@@ -16,10 +16,10 @@ def classify_questions(index,start_q,end_q):
 def store_result(index,start_q,end_q,iteration): 
   [prompt, results] = classify_questions(index,start_q,end_q)
   filename = 'results/iteration-'+str(iteration)+'/prompts/'+str(start_q)+'to'+str(end_q)+'.txt'
-  with open(filename, 'w') as file:
+  with open(filename, 'w', encoding='utf-8') as file:
     file.write(prompt)
   filename = 'results/iteration-'+str(iteration)+'/raw_results/'+str(start_q)+'to'+str(end_q)+'.txt'
-  with open(filename, 'w') as file:
+  with open(filename, 'w', encoding='utf-8') as file:
     json.dump(results, file)
     
   final_result = {}
@@ -43,6 +43,10 @@ def store_result(index,start_q,end_q,iteration):
   
   with open('results/iteration-'+str(iteration)+'/results/'+str(start_q)+'to'+str(end_q)+'.json', 'w') as file:
     json.dump(final_result, file)
+
+  if len(final_result) != end_q - start_q:
+    print(f"The result from question {start_q} to {end_q} is incomplete.")
+    
   return final_result
     
 #store_result(index = 2, start_q = 1,end_q = 3)

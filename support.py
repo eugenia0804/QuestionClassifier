@@ -22,11 +22,3 @@ with open(output_file, 'w') as file:
     json.dump(combined_data, file, indent=4)
 
 print(f"Combined data saved to '{output_file}'.")
-
-string = """
-First, we'll create the same sampling distribution that we created yesterday. Use the model above to create the sampling distribution for the mean scores of samples of 2 students (n=2) taken from a population of 48 students (N=48).
-
-1) Set the slider and click `setup` and `collect samples.` The sampling will happen faster if you pull the `model speed` slider all the way to the right.
-
-"""
-print(len(string))

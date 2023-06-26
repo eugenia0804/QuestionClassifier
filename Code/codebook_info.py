@@ -10,4 +10,3 @@ def get_codebookinfo(dic,index):
         
         return practice_name, subpractices, explanation
 
-print(get_codebookinfo(get_codebook(),2))
